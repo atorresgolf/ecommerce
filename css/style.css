@@ -1,7 +1,17 @@
 *{
-  padding: 0;
-  margin: 0;
+    margin: 0 auto;
 }
-header.ecommerce{
+header.golfshop{
+  background-color: blue;
+
+}
+img.logo{
+  display:block;
+}
+
+section.productosdestacados{
   background-color: grey;
+}
+div.dropdown-menu{
+  color: black;
 }

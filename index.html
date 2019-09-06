@@ -6,12 +6,13 @@
 				<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 				<link rel="stylesheet" href="css/style.css">
 
-		<title>eCommerce</title>
+		<title>Golfshop</title>
 		<link href="https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<header class="ecommerce">
-			<h1> Golf pro shop</h1>
+		<header class="golfshop">
+
+			<img src="img/shopgolf.png" alt="logotipo" class="logo">
 
 	<div class="container">
 
@@ -20,10 +21,14 @@
 			<div class="pos-f-t">
 			  <div class="collapse" id="navbarToggleExternalContent">
 			    <div class="bg-dark p-4">
-			      <h5 class="text-white h4">Productos</h5>
-						<h5 class="text-white h4">ABOUT</h5>
-						<h5 class="text-white h4">CONTACT</h5>
-			      <span class="text-muted">ABOUT</span>
+						<a href="#productos"><h5 class="text-white h4">Productos</h5></a>
+						<a href="facs.html"><h5 class="text-white h4">F.A.Q. Preguntas frecuentes</h5></a>
+						<a href="regstro.html"><h5 class="text-white h4">Formulario de Registro</h5></a>
+						<a href="login.html"><h5 class="text-white h4">Formulario de Login</h5></a>
+						<a href="contacto.php"><h5 class="text-white h4">Contacto</h5></a>
+						<a href="perfil.php"><h5 class="text-white h4">Pérfil del Usuario</h5></a>
+						<a href="acerca.php"><h5 class="text-white h4">Acerca de Nosotros</h5></a>
+
 			    </div>
 			  </div>
 			  <nav class="navbar navbar-dark bg-dark">
@@ -35,69 +40,32 @@ Menu
 			</div>
 </div>
 
-//*posible listado con referencias a paginas*//
-<nav>
-<a href="#productos">Productos</a>
-<br>
-<a href="facs.php">F.A.Q. Preguntas frecuentes</a>
-<br>
-<a href="regstro.php">Formulario de Registro</a>
-<br>
-<a href="login.php">Formulario de Login</a>
-<br>
-<a href="contacto.php">Contacto</a>
-<br>
-<a href="perfli.php">Pérfil del Usuario</a>
-<br>
-
-</nav>
-
-
-
 	</header>
 
-<section class="productos">
-<div class="row mx-auto contenedor0">
-	<div class="col-xs-12 col-md-12 col-xl-12"> </div>
-<div class="row mx-auto contenedor1">
-	<img src="C:\Users\atorr\Documents\Atom\tp-bootstrap\html\images\profile.png" alt="" width="250px">
-</div>
-<div class="row mx-auto contenedor1">
-<h3>FREELANCE PORTFOLIO</h3>
-</div>
-<div class="row mx-auto contenedor1">
-<p>Web Developer - Graphic Artist - User Experience Designer</p>
-</div>
-	<ion-icon name="star-outline"></ion-icon>
-</div>
+
+<section class="productosdestacados">
+	<div class="dropdown-menu">
+	  <span class="dropdown-item-text">Nuestros Articulos</span>
+	  <a class="dropdown-item" href="#">Drivers</a>
+	  <a class="dropdown-item" href="#">Hierros</a>
+	  <a class="dropdown-item" href="#">Bolsas</a>
+	</div>
 </section>
+
+
+
+
+
 <div class="row mx-auto contenedor2">
-	<img src="C:\Users\atorr\Documents\Atom\tp-bootstrap\html\images\cabin.png" alt="" width="250px" class="center">
-	<img src="C:\Users\atorr\Documents\Atom\tp-bootstrap\html\images\cake.png" alt="" width="250px" class="center">
-	<img src="C:\Users\atorr\Documents\Atom\tp-bootstrap\html\images\circus.png" alt="" width="250px" class="center">
-	<img src="C:\Users\atorr\Documents\Atom\tp-bootstrap\html\images\game.png" alt="" width="250px"class="center">
-	<img src="C:\Users\atorr\Documents\Atom\tp-bootstrap\html\images\safe.png" alt="" width="250px"class="center">
-	<img src="C:\Users\atorr\Documents\Atom\tp-bootstrap\html\images\submarine.png" alt="" width="250px"class="center">
+	<img src="img/callaway_hierros.png" alt="" width="250px" class="center">
+	<img src="img/ping_hierros.png" alt="" width="250px" class="center">
+	<img src="img/taylor_m5.png" alt="" width="250px" class="center">
+	<img src="img/ping_driver.png" alt="" width="250px"class="center">
 
 </div>
 
-<section class="pie">
-<div class="row mx-auto contenedor0">
-	<div class="col-xs-12 col-md-12 col-xl-12"> </div>
 
-<div class="row mx-auto contenedor3">
-<h3>ABOUT</h3>
-</div>
-<br>
-<div class="row mx-auto contenedor3">
-<h2>Frelancer........</h2>
-</div>
-	<ion-icon name="star-outline"></ion-icon>
-</div>
-</section>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 </body>
 </html>
