@@ -9,9 +9,9 @@ img.logo{
   display:block;
 }
 
-section.productosdestacados{
+section.productos{
   background-color: grey;
 }
-div.dropdown-menu{
-  color: black;
+
+ul li a{
 }
