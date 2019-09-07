@@ -6,45 +6,56 @@
 				<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 				<link rel="stylesheet" href="css/style.css">
 
-		<title>Golfshop</title>
+		<title>The Golf Shop</title>
 		<link href="https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<header class="golfshop">
-
 			<img src="img/shopgolf.png" alt="logotipo" class="logo">
 
 	<div class="container">
 
 		<!-- cabecera -->
 
-			<div class="pos-f-t">
-			  <div class="collapse" id="navbarToggleExternalContent">
-			    <div class="bg-dark p-4">
-						<a href="#productos"><h5 class="text-white h4">Productos</h5></a>
-						<a href="facs.html"><h5 class="text-white h4">F.A.Q. Preguntas frecuentes</h5></a>
-						<a href="regstro.html"><h5 class="text-white h4">Formulario de Registro</h5></a>
-						<a href="login.html"><h5 class="text-white h4">Formulario de Login</h5></a>
-						<a href="contacto.php"><h5 class="text-white h4">Contacto</h5></a>
-						<a href="perfil.php"><h5 class="text-white h4">Pérfil del Usuario</h5></a>
-						<a href="acerca.php"><h5 class="text-white h4">Acerca de Nosotros</h5></a>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<a class="navbar-brand" href="#">The Golf Shop</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+</button>
 
-			    </div>
-			  </div>
-			  <nav class="navbar navbar-dark bg-dark">
-			    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-Menu
-					  <span class="navbar-toggler-icon"></span>
-			    </button>
-			  </nav>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	<ul class="navbar-nav mr-auto">
+		<li class="nav-item active">
+			<a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#">Nuestra Escuela</a>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Nuestros Articulos
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item" href="#">Drivers</a>
+				<a class="dropdown-item" href="#">Hierros</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#">Accesorios</a>
 			</div>
-					<div class ="banner">
+		</li>
+		<li class="nav-item">
+			<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+		</li>
+	</ul>
+	<form class="form-inline my-2 my-lg-0">
+		<input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+		<button class="btn btn-outline-success gr-22 gr-sm-22" type="submit">Buscar</button>
+	</form>
 </div>
-
+</nav>
 	</header>
 
 
-<section class="productos">
+<!--<section class="productos">
 	<ul class="nav flex-column">
 	  <li class="nav-item">
 	    <a class="nav-link active" href="#">Nuestros Articulos</a>
@@ -59,7 +70,7 @@ Menu
 	    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
 	  </li>
 	</ul>
-</section>
+</section>-->
 
 <!--<div class="row mx-auto contenedor2">
 	<img src="img/callaway_hierros.png" alt="" width="250px" class="center">
@@ -73,15 +84,16 @@ Menu
   <div class="card-body">
     <h5 class="card-title">HIERRO CALLAWAY</h5>
     <p class="card-text">POR FAVOR BREVE DESCRIPCION AQUI ANTO</p>
-    <a href="#" class="btn btn-primary">COMPRAR</a>
+    <a href="#" class="btn btn-success">COMPRAR</a>
   </div>
+</div>
 <!--/==========================SEGUNDA CARTA===============================-->
 	<div class="card" style="width: 18rem;">
 	  <img src="img/taylor_m5.jpg" class="card-img-top" alt="...">
 	  <div class="card-body">
 	    <h5 class="card-title">TAYLOR M 5</h5>
 	    <p class="card-text">POR FAVOR BREVE DESCRIPCION AQUI ANTO</p>
-	    <a href="#" class="btn btn-primary">COMPRAR</a>
+	    <a href="#" class="btn btn-success">COMPRAR</a>
 	  </div>
 </div>
 <!--/==========================TERCERA CARTA===============================-->
@@ -90,11 +102,22 @@ Menu
 	<div class="card-body">
 		<h5 class="card-title">PING DRIVER</h5>
 		<p class="card-text">POR FAVOR BREVE DESCRIPCION AQUI ANTO</p>
-		<a href="#" class="btn btn-primary">COMPRAR</a>
+		<a href="#" class="btn btn-success">COMPRAR</a>
 	</div>
+</div>
 <!--/==========================CUARTA CARTA===============================-->
-</div>
-</div>
+
+<footer>
+	<img src="/Applications/MAMP/htdocs/PROYECTOS/ecommerce/img/LOGO ACADEMIA.jpg" alt="" class="academia">
+	<style>a {text-decoration: none;} </style>
+		<ul class="sinvineta1">
+			<li><a href="Contacto.html" style="color:#CFCBCB;">Home</a></li>
+			<br>
+			<li><a href="www.facebook.com" style="color:#CFCBCB;">Preguntas Frecuentes</a></li>
+			<li><a href="www.twitter.com" style="color:#CFCBCB;">Formulario de Registro</a></li>
+			<li><a href="www.instagram.com" style="color:#CFCBCB;">Contacto</a></li>
+		</ul>
+</footer>
 
 
 
