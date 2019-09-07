@@ -42,7 +42,17 @@ img.logo{
   display:block;
 }
 
+h1{
+  color: #0B6121;
+  text-align: center;
+}
 
+h3{
+margin-top: 30px;
+  color: #0B6121;
+  font-family: sans-serif;
+  text-align: center;
+}
 section.productos{
   background-color: grey;
 }

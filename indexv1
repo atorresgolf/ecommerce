@@ -31,19 +31,20 @@
 		<li class="nav-item">
 			<a class="nav-link" href="#">Nuestra Escuela</a>
 		</li>
-		<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				Nuestros Articulos
-			</a>
 
-			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				<a class="dropdown-item" href="#drivers">Drivers</a>
-				<a class="dropdown-item" href="hierros.html">Hierros</a>
-				<a class="dropdown-item" href="putter.html">Putters</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="accesorios.html">Accesorios</a>
-			</div>
-		</li>
+		<div class="dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Nuestros Articulos
+			<span class="caret"></span></button>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Drivers</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Hierros</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Putters</a></li>
+				<li role="presentation" class="divider"></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Accesorios</a></li>
+			</ul>
+		</div>
+
+
 		<li class="nav-item">
 			<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
 		</li>
@@ -151,8 +152,8 @@
 		<ul class="sinvineta1">
 			<li><a href="Contacto.html" style="color:#CFCBCB;">Home</a></li>
 			<br>
-			<li><a href="preguntas.html" style="color:#CFCBCB;">Preguntas Frecuentes</a></li>
-			<li><a href="formulario.html" style="color:#CFCBCB;">Formulario de Registro</a></li>
+			<li><a href="www.facebook.com" style="color:#CFCBCB;">Preguntas Frecuentes</a></li>
+			<li><a href="www.twitter.com" style="color:#CFCBCB;">Formulario de Registro</a></li>
 			<li><a href="www.instagram.com" style="color:#CFCBCB;">Contacto</a></li>
 		</ul>
 </footer>
