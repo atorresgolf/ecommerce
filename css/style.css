@@ -1,6 +1,39 @@
 *{
     margin: 0 auto;
 }
+
+.banner{
+  width: 100px;
+  height: 100px;
+  border: 3px solid red;
+  margin: auto;
+  background-size: 100% 100%;
+  animation: banner 15s infinite;
+  animation-direction: alternate;
+  background-color: white;
+}
+
+@keyframes banner{
+  0%, 30%{
+    background-image: url(../img/ping_driver.jpg);
+    opacity: 1;
+  }
+  31%, 34{
+  opacity: 0.1;
+  }
+  35%, 65%{
+    background-image: url(../img/ping_hierros.jpg);
+    opacity: 1;
+  }
+  66%, 69%{
+    opacity: 0.1;
+  }
+  70% 100%{
+    opacity: 1;
+    background-image: url(../img/taylor_m5.jpg);
+  }
+}
+
 header.golfshop{
   background-color: blue;
 
@@ -9,9 +42,18 @@ img.logo{
   display:block;
 }
 
+
 section.productos{
   background-color: grey;
 }
 
-ul li a{
+.body{
+  overflow: hidden;
+}
+.productos{
+  float: left;
+}
+
+.card{
+  text-align: center;
 }
