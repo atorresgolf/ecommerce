@@ -38,6 +38,13 @@ header.golfshop{
   margin-bottom: 10px;
 
 }
+
+header.academia{
+  border-radius: 50%;
+  width: 25%;
+  height: 25%;
+    margin-bottom: 10px;
+}
 img.logo{
   display:block;
 }
@@ -52,6 +59,15 @@ margin-top: 30px;
   color: #0B6121;
   font-family: sans-serif;
   text-align: center;
+}
+
+div.fotos{
+  float:left;
+}
+
+div img{
+  width: 100%;
+  margin: auto;
 }
 section.productos{
   background-color: grey;
