@@ -34,9 +34,8 @@
   }
 }*/
 
-header.golfshop{
-  margin-bottom: 10px;
-
+.golfshop {
+  margin-bottom: 2%;
 }
 
 header.academia{
@@ -45,13 +44,16 @@ header.academia{
   height: 25%;
     margin-bottom: 10px;
 }
+
 img.logo{
   display:block;
 }
 
+
 h1{
   color: #0B6121;
   text-align: center;
+  margin-top: 2%;
 }
 
 h3{
@@ -83,6 +85,7 @@ section.productos{
 .card{
   text-align: center;
   margin-top: 15px;
+  float: left;
 }
 
 footer {
@@ -126,3 +129,22 @@ section{
   padding-top: 5%;
   float: right;
 }
+
+/*------media para aipads 768px------*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .card{
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+  }
+
+/*------media para desktop y notebooks 1224px------*/
+@media only screen and (min-width : 1224px)  {
+  .card{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    margin-left: 15%
+  }
+  }
