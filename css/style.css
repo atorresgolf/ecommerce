@@ -38,12 +38,7 @@
   margin-bottom: 2%;
 }
 
-header.academia{
-  border-radius: 50%;
-  width: 25%;
-  height: 25%;
-    margin-bottom: 10px;
-}
+
 
 img.logo{
   display:block;
@@ -62,15 +57,24 @@ margin-top: 30px;
   font-family: sans-serif;
   text-align: center;
 }
-
-div.fotos{
-  float:left;
+h1.academia{
+  color="#0B0B61;
+}
+h3.academia{
+  color="#0B0B61;
 }
 
-div img{
+img.fotoacad{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 50%;
+}
+/*div img{
   width: 100%;
   margin: auto;
-}
+}*/
 section.productos{
   background-color: grey;
 }
