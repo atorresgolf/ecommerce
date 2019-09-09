@@ -89,15 +89,16 @@ section.productos{
 .body{
   overflow: hidden;
 }
+
 .productos{
   float: left;
 }
 
-.card{
+/*.card{
   text-align: center;
   margin-top: 15px;
   float: left;
-}
+}*/
 
 footer {
   margin-top: 15px;
@@ -110,18 +111,17 @@ footer {
   border-left-style: none;
   border-right-style: none;
 }
+
 .academia{
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 50px;
-  border-radius: 5%;
+  margin-top: -6%;
 }
+
 .sinvineta1{
   list-style: none;
   float: right;
-  font-size: 30px;
-  line-height: 35px;
-  padding-top: 10px;
+  font-size: 20px;
+  line-height: 120%;
+  padding-top: 2%;
   padding-right: 20px;
 }
 
@@ -143,19 +143,19 @@ section{
 
 /*------media para aipads 768px------*/
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    .card{
+/*    .card{
       margin-left: 10%;
       margin-right: 10%;
     }
 
-  }
+  }*/
 
 /*------media para desktop y notebooks 1224px------*/
 @media only screen and (min-width : 1224px)  {
-  .card{
+  /*.card{
     margin-left: 10%;
     margin-right: 10%;
     text-align: center;
     margin-left: 15%
   }
-  }
+  }*/
