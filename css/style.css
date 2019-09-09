@@ -38,7 +38,11 @@
   margin-bottom: 2%;
 }
 
+.redes{
+  text-align: center;
+  margin-bottom: 2%;
 
+}
 
 img.logo{
   display:block;
@@ -50,18 +54,36 @@ img.logo{
 h1{
   color: #0B6121;
   text-align: center;
-  margin-top: 2%;
+  margin-top: 1%;
+  font-family: comic;
 }
 
-h3{
+h3 {
 margin-top: 30px;
   color: #0B6121;
-  font-family: sans-serif;
   text-align: center;
 }
 
 main {
   padding-left: 25%;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  margin-top: 1%;
+}
+
+.container-card {
+  font-size: 80%;
+}
+
+.card {
+  border-color: #18EB8E;
+  border-radius: 10%;
+  border-style: dashed;
+}
+
+.card-img-top {
+  width: 50%;
+  padding-top: 5%;
 }
 
 h1.academia{
@@ -82,6 +104,7 @@ img.fotoacad{
   width: 100%;
   margin: auto;
 }*/
+
 section.productos{
   background-color: grey;
 }
@@ -112,6 +135,12 @@ footer {
   border-right-style: none;
 }
 
+.tarjetas {
+  text-align: left;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
 .academia{
   margin-top: -4%;
 }
@@ -138,7 +167,21 @@ section{
 
 .pago{
   padding-top: 5%;
+  margin-right: 10%;
   float: right;
+}
+
+.volver1 {
+  float: right;
+  margin-right: 15%;
+  margin-top: 5%;
+}
+
+.autor{
+  text-align: left;
+  color:#CFCBCB;
+  font-size: 10px;
+  margin-top: -5%;
 }
 
 /*------media para aipads 768px------*/
