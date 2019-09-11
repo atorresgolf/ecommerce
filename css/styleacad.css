@@ -59,13 +59,12 @@ img.fotoacad{
   height: 40%;
 
 }
-/*div img{
-  width: 100%;
-  margin: auto;
-}*/
+
 div.fotos{
   width: 100%;
   float:left;
+  margin-top: 10px;
+
 }
 .body{
   overflow: hidden;
@@ -111,19 +110,25 @@ section{
 
 /*------media para aipads 768px------*/
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    .card{
-      margin-left: 10%;
-      margin-right: 10%;
+    .fotos{
+      margin-left: 5%;
+      margin-right: 5%;
+      margin: 6px 0;
+      width: 35%;
+      height: auto;
+      box-sizing: border-box;
     }
 
   }
 
 /*------media para desktop y notebooks 1224px------*/
 @media only screen and (min-width : 1224px)  {
-  .card{
-    margin-left: 10%;
-    margin-right: 10%;
+  .fotos{
+    margin-left: 5%;
+    margin-right: 5%;
     text-align: center;
-    margin-left: 15%
+    padding: 0 6px;
+    float:left;
+    width: 22.5%;
   }
   }
