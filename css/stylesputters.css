@@ -2,11 +2,6 @@
     margin: 0 auto;
 }
 
-/*.container {
-  background-color: red;
-}*/
-
-
 .golfshop {
   margin-bottom: 2%;
   text-align: center;
@@ -33,19 +28,14 @@
   font-family: arial sans-serif;
 }
 
-.card-deck {
-  width: auto;
-  padding: 0.5%;
-  box-sizing: border-box;
+.container {
+  overflow: hidden;
+  padding-left: 7%;
 }
 
-.card-body {
-  text-align: center;
-}
-
-.card-img-top {
-  width: 50%;
-  height: 50%;
+.card {
+  float: left;
+  margin-left: 1%;
 }
 
 .academia {
