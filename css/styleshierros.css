@@ -17,23 +17,69 @@
   margin-bottom: 2%;
 }
 
-.containerbarra{
+.barra {
   background-color: #F3F3F1;
+  /*border-top-style: solid;*/
+  border-bottom-style: solid;
+  /*border-top-color: #18EB8E;*/
+  border-bottom-color: #18EB8E;
+  padding-bottom: 0.1%;
 }
 
-.containertitulo {
-  color: #0B6121;
-  text-align: center;
-  margin-top: 1%;
-  font-family: comic;
-}
 
 .card-deck {
   width: auto;
-  padding: 5%;
+  padding: 0.5%;
   box-sizing: border-box;
 }
 
-.card {
-  border-left-style: solid;
+.card-body {
+  text-align: center;
 }
+
+.card-img-top {
+  width: 50%;
+  height: 50%;
+}
+
+.academia {
+  height: 45%;
+  width: 45%;
+  padding-left: 60px;
+}
+
+.sinvineta1{
+  list-style: none;
+  float: right;
+  font-size: 15px;
+  line-height: 120%;
+  padding-top: 2%;
+  padding-right: 50px;
+}
+
+footer {
+  height: 5%;
+  width: 100%;
+  overflow: hidden;
+  border-top-style: solid;
+  border-top-color: #18EB8E;
+}
+
+/*------media para aipads 768px------*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  .academia {
+    height: 15%;
+    width: 15%;
+    padding-left: 60px;
+  }
+  }
+
+/*------media para desktop y notebooks 1224px------*/
+@media only screen and (min-width : 1224px)  {
+  .academia {
+    height: 15%;
+    width: 15%;
+    padding-left: 60px;
+  }
+  }
+  }
