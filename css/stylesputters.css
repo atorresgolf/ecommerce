@@ -48,6 +48,14 @@ margin-top: 1%;
   float: left;
   margin-left: 1%;
   margin-top: 1%;
+    border-color: #GGG;
+    border-radius: 2%;
+    /*border-style:none;*/
+    border-bottom-style: solid;
+    border-bottom-width: thick;
+    border-left-width: thick;
+    text-align: center;
+  }
 }
 
 footer {

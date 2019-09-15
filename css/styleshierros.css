@@ -50,6 +50,16 @@ margin-top: 1%;
   text-align: center;
 }
 
+.card {
+  border-color: #GGG;
+  border-radius: 5%;
+  /*border-style:none;*/
+  border-bottom-style: solid;
+  border-bottom-width: thick;
+  border-left-width: thick;
+  text-align: center;
+}
+
 .card-img-top {
   width: 50%;
   height: 50%;
