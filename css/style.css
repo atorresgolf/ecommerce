@@ -6,6 +6,19 @@
   margin-bottom: 2%;
 }
 
+.panel_login {
+  margin-top: -20%;
+}
+
+.hola {
+ border: solid;
+ background-color:#0B6121;
+ color: white;
+ text-align: center;
+font-family: comic
+}
+
+
 .redes{
   text-align: center;
   margin-bottom: 2%;
