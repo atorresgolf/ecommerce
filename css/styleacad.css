@@ -53,17 +53,18 @@ img.logo{
   }
 
 
-h1, h3{
+p.titulo{
 margin-top: 30px;
   color: #0B0B61;
   font-family: sans-serif;
   text-align: center;
+  font-size: 1.5em;
 }
 
 img.fotoacad{
   display: block;
-  width: 40%;
-  height: 40%;
+  width: 20%;
+  height: 20%;
 
 }
 
@@ -91,13 +92,13 @@ footer {
   border-right-style: none;
 }
 
-.academia {
+/*.academia {
   /*height: 45%;*/
-  width: 20%;
+/*  width: 20%;
 /*  padding-left: 60px;*/
-margin-top: -4%;
+/*margin-top: -4%;
 }
-
+*/
 .autor {
     text-align: left;
     color: #CFCBCB;
@@ -127,9 +128,7 @@ margin-top: -4%;
   width: 50%;
   height: 3%;
 }
-section{
-  overflow: hidden;
-}
+
 
 .pago{
   padding-top: 5%;
@@ -141,6 +140,19 @@ section{
 
 /*------media para aipads 768px------*/
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  img.fotoacad{
+    display: block;
+    width: 25%;
+    height: 25%;
+
+  }
+
+/*  div.fotos{
+    width: 100%;
+    float:left;
+    margin-top: 10px;
+
+  }*/
     .fotos{
       margin-left: 5%;
       margin-right: 5%;
@@ -154,6 +166,19 @@ section{
 
 /*------media para desktop y notebooks 1224px------*/
 @media only screen and (min-width : 1224px)  {
+  img.fotoacad{
+    display: block;
+    width: 40%;
+    height: 40%;
+
+  }
+
+  /*div.fotos{
+    width: 100%;
+    float:left;
+    margin-top: 10px;
+
+  }*/
   .fotos{
     margin-left: 5%;
     margin-right: 5%;
