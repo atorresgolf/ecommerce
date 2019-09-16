@@ -1,0 +1,65 @@
+*{
+    margin: 0 auto;
+}
+
+h1 {
+  color: #0B6121;
+  text-align: center;
+  margin-top: 1%;
+  font-family: comic;
+}
+
+h3 {
+margin-top: 30px;
+  color: #0B6121;
+  text-align: center;
+}
+
+.varios {
+  overflow: hidden;
+}
+
+.card {
+  float: left;
+  margin-left: 1%;
+  margin-top: 1%;
+}
+
+footer {
+  margin-top: 15px;
+  height: 300px;
+  /*background-color: green;*/
+  overflow: hidden;
+  width: 90%;
+  border: 3px double green;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-right-style: none;
+}
+
+.tarjetas {
+  text-align: left;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.academia{
+  margin-top: -4%;
+}
+
+.sinvineta1{
+  list-style: none;
+  float: right;
+  font-size: 20px;
+  line-height: 120%;
+  padding-top: 2%;
+  padding-right: 20px;
+}
+
+.list-group-item{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-top: 1%;
+  width: 50%;
+  height: 3%;
+}

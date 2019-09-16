@@ -1,0 +1,50 @@
+*{
+    margin: 0 auto;
+}
+
+.hola {
+ border: solid;
+ background-color:#0B6121;
+ color: white;
+ text-align: center;
+font-family: comic
+}
+
+footer {
+  margin-top: 15px;
+  height: 300px;
+  /*background-color: green;*/
+  overflow: hidden;
+  width: 90%;
+  border: 3px double green;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-right-style: none;
+}
+
+.tarjetas {
+  text-align: left;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.academia{
+  margin-top: -4%;
+}
+
+.sinvineta1{
+  list-style: none;
+  float: right;
+  font-size: 20px;
+  line-height: 120%;
+  padding-top: 2%;
+  padding-right: 20px;
+}
+
+.list-group-item{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-top: 1%;
+  width: 50%;
+  height: 3%;
+}
