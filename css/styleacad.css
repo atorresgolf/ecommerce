@@ -140,51 +140,64 @@ footer {
 
 /*------media para aipads 768px------*/
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  *{
+      margin: 0 auto;
+  }
   img.fotoacad{
     display: block;
     width: 25%;
     height: 25%;
 
   }
+  .body{
+    overflow: hidden;
+  }
 
-/*  div.fotos{
-    width: 100%;
+  div.fotos{
+    width: 40%;
     float:left;
     margin-top: 10px;
+margin-left: 5%;
+margin-right: 5%;
+box-sizing: border-box;
+height: auto;
 
-  }*/
-    .fotos{
-      margin-left: 5%;
-      margin-right: 5%;
-      margin: 6px 0;
-      width: 35%;
-      height: auto;
-      box-sizing: border-box;
-    }
+  }
+
 
   }
 
 /*------media para desktop y notebooks 1224px------*/
 @media only screen and (min-width : 1224px)  {
+  *{
+      margin: 0 auto;
+  }
+
+  .body{
+    overflow: hidden;
+  }
   img.fotoacad{
     display: block;
-    width: 40%;
-    height: 40%;
+    width: 30%;
+    height: 30%;
 
   }
 
+  div.fotos{
+    width: 25%;
+    float:left;
+    margin-top: 10px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  box-sizing: border-box;
+  height: auto;
+
+  }
   /*div.fotos{
     width: 100%;
     float:left;
     margin-top: 10px;
 
   }*/
-  .fotos{
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: center;
-    padding: 0 6px;
-    float:left;
-    width: 22.5%;
-  }
+
   }
