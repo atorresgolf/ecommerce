@@ -102,7 +102,7 @@ footer {
 .autor {
     text-align: left;
     color: #CFCBCB;
-    font-size: 10px;
+    font-size: 0.5em;
     margin-top: -5%;
 }
 
@@ -110,10 +110,10 @@ footer {
 .sinvineta1{
   list-style: none;
   float: right;
-  font-size: 30px;
-  line-height: 35px;
-  padding-top: 10px;
-  padding-right: 20px;
+  font-size: 0.75em;
+  line-height: 15px;
+  padding-top: 5px;
+  padding-right: 10px;
 }
 .volver1 {
   float: right;
@@ -149,6 +149,14 @@ footer {
     height: 25%;
 
   }
+  .sinvineta1{
+    list-style: none;
+    float: right;
+    font-size: 1.25em;
+    line-height: 25px;
+    padding-top: 7px;
+    padding-right: 15px;
+  }
   .body{
     overflow: hidden;
   }
@@ -163,6 +171,13 @@ box-sizing: border-box;
 height: auto;
 
   }
+  .autor {
+      text-align: left;
+      color: #CFCBCB;
+      font-size: 0.75em;
+      margin-top: -5%;
+  }
+
 
 
   }
@@ -193,6 +208,22 @@ height: auto;
   height: auto;
 
   }
+  .sinvineta1{
+    list-style: none;
+    float: right;
+    font-size: 1.5em;
+    line-height: 35px;
+    padding-top: 10px;
+    padding-right: 20px;
+  }
+  .autor {
+      text-align: left;
+      color: #CFCBCB;
+      font-size: 1em;
+      margin-top: -5%;
+  }
+
+
   /*div.fotos{
     width: 100%;
     float:left;
