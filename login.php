@@ -38,7 +38,7 @@
 											<div class="input-group">
 												<span class="input-group-addon"> <span class="fas fa-eye"><i class="fas fa-eye"></i> </span>
 											</span>
-											<input type="email" class="form-control" id="mail" placeholder="E-mail">
+											<input type="email" name = "email" class="form-control" id="mail" placeholder="E-mail">
 										</div>
 									</div>
 									<div class="form-group">
@@ -48,12 +48,14 @@
 											<span class="input-group-addon">
 												<span class="glyphicon glyphicon-asterisk"> </span>
 											</span>
-											<input type="password" class="form-control" id="pass" value = "" placeholder="Contraseña">
+											<input type="password" name = "clave" class="form-control" id="pass" value = "" placeholder="Contraseña">
 										</div>
 									</div>
 									<hr/>
 									<button type="submit" class="btn btn-success">
 										<span class="glyphicon glyphicon-ok"></span> Entrar</button><p><br/></p>
+										<p class= "form-link">¿No estas registrado? <a href="formulario.php">Ingresa aquí</a></p>
+
 									</form>
 								</div>
 							</div>
