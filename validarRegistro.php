@@ -12,9 +12,8 @@
 		$direccion = trim($_POST['direccion']);
 		$direccion1 = trim($_POST['direccion1']);
 		$ciudad = trim($_POST['ciudad']);
-		$provincia = $_POST['provincia'];
 		$codPostal = trim($_POST['codpostal']);
-
+$provincia = $_POST['provincia'];
 
 
 		// Si el nombre completo está vacío

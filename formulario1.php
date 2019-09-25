@@ -26,8 +26,36 @@ if ( count($_POST) ) {
   $direccion = trim($_POST['direccion']);
   $direccion1 = trim($_POST['direccion1']);
   $ciudad = trim($_POST['ciudad']);
-  $provincia = $_POST['provincia'];
+//  $provincia = $_POST['provincia'];
   $codPostal = trim($_POST['codpostal']);
+
+
+  		$provincias = [
+  			"Tuc" => "Tucumán",
+  			"BsAs" => "Buenos Aires",
+  			"Cat" => "Catamarca",
+  			"Cha" => "Chaco",
+  			"Chu" => "Chubut",
+  			"Cor" => "Córdoba",
+  			"Corr" => "Corrientes",
+  			"Ent" => "Entre Ríos",
+  			"For" => "Formosa",
+  			"Juj" => "Jujuy",
+  			"Lap" => "La Pampa",
+  			"Lar" => "La Rioja",
+  			"Men" => "Mendoza",
+  			"Mis" => "Misiones",
+  			"Neu" => "Neuquén",
+  			"Rio" => "Río Negro",
+  			"Sal" => "Salta",
+  			"SanJ" => "San Juan",
+  			"SanL" => "San Luis",
+  			"Sant" => "Santa Cruz",
+  			"SanF" => "Santa Fe",
+  			"Sgo" => "Santiago del Estero",
+  			"Tie" => "Tierra del Fuego",
+  		];
+
 
 
 
@@ -96,9 +124,8 @@ if ( count($_POST) ) {
 					<div class="col-md-4">
 	<form class="" action="formulario.php" method="POST">
 
-	  <div class="form-row">
-	    <div class="col">
-	      <input type="text" class="form-control" name="nombre" value="<?=isset($nombre) ? $nombre : null;?>" placeholder="Nombre/s">
+	    <div class="col-md-8">
+	      <input type="text" class="" name="nombre" value="<?=isset($nombre) ? $nombre : null;?>" placeholder="Nombre/s">
 
         <?php if(isset($erroresEnRegistro["errorNombre"])):?>
           <div class="alert alert-primary" role="alert" >
@@ -106,8 +133,8 @@ if ( count($_POST) ) {
             </div>
 <?php endif; ?>
       </div>
-	    <div class="col">
-	      <input type="text" class="form-control" name="apellido" value="<?=isset($apellido) ? $apellido : null;?>" placeholder="Apellido">
+	    <div class="col-md-8">
+	      <input type="text" class="form" name="apellido" value="<?=isset($apellido) ? $apellido : null;?>" placeholder="Apellido">
         <?php if(isset($erroresEnRegistro["errorApellido"])):?>
           <div class="alert alert-primary" role="alert" >
               <p class = "error"> <?= $erroresEnRegistro["errorApellido"]; ?></p>
@@ -117,63 +144,51 @@ if ( count($_POST) ) {
 	  </div>
 
 
-  <div class="form-row">
-    <div class="form-group col-md-6">
+    <div class="col-md-8">
       <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" name="email" value="<?=isset($email) ? $email : null;?>" id="inputEmail4" placeholder="Email">
+      <input type="email" class="form-control" name="email" value="<?=isset($email) ? $email : null;?>"  placeholder="Email">
     </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">Clave</label>
-      <input type="password" class="form-control" name="clave" value="<?=isset($clave) ? $clave : null;?>" id="inputPassword4" placeholder="********">
-    </div>
-  </div>
 
-  <div class="form-group">
-    <label for="inputAddress">Direccion</label>
-    <input type="text" class="form-control" name="direccion" value="<?=isset($direccion) ? $direccion : null;?>" id="inputAddress" placeholder="Salta 1050">
-  </div>
-  <div class="form-group">
-    <label for="inputAddress2">Direccion 2</label>
-    <input type="text" class="form-control" name="direccion1" value="<?=isset($direccion1) ? $direccion1 : null;?>" id="inputAddress2" placeholder="Torre 7, PB, F">
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">Ciudad</label>
-      <input type="text" class="form-control"  name="ciudad" value="<?=isset($ciudad) ? $ciudad : null;?>" id="inputCity">
+    <div class="col-md-6">
+      <label for="">Clave</label>
+      <input type="password" class="" name="clave" value="<?=isset($clave) ? $clave : null;?>"  placeholder="********">
     </div>
-    <div class="form-group col-md-4">
-      <label for="inputState">Provincia</label>
-      <select id="inputState" class="form-control" name="provincia">
-     <option value ="" selected>Elija...</option>
-     <option value="Tuc">Tucumán</option>
-           <option value="Bsas">Buenos Aires</option>
-           <option value="Cat">Catamarca</option>
-            <option value="Cha">Chaco</option>
-           <option value="Chu">Chubut</option>
-           <option value="Cor">Córdoba</option>
-            <option value="Corr">Corrientes</option>
-            <option value="Ent">Entre Ríos</option>
-            <option value="For">Formosa</option>
-            <option value="Juj">Jujuy</option>
-            <option value="Lap">La Pampa</option>
-            <option value="Lar">La Rioja</option>
-            <option value="Men">Mendoza</option>
-            <option value="Mis">Misiones</option>
-            <option value="Neu">Neuquén</option>
-            <option value="Rio">Río Negro</option>
-            <option value="Sal">Salta</option>
-            <option value="SanJ">San Juan</option>
-            <option value="SanL">San Luis</option>
-            <option value="Sant">Santa Cruz</option>
-            <option value="SanF">Santa Fe</option>
-            <option value="Sgo">Santiago del Estero</option>
-            <option value="Tie">Tierra del Fuego</option>
 
+
+  <div class="col-md-6">
+    <label for="">Direccion</label>
+    <input type="text" class="" name="direccion" value="<?=isset($direccion) ? $direccion : null;?>"  placeholder="Salta 1050">
+  </div>
+  <div class="">
+    <label for="">Direccion 2</label>
+    <input type="text" class="" name="direccion1" value="<?=isset($direccion1) ? $direccion1 : null;?>"  placeholder="Torre 7, PB, F">
+  </div>
+    <div class="col-md-6">
+      <label for="">Ciudad</label>
+      <input type="text" class=""  name="ciudad" value="<?=isset($ciudad) ? $ciudad : null;?>" >
+    </div>
+
+    <div class="col-md-8">
+      <label for="">Provincia:</label>
+      <select class="" name="provincia">
+    <option value ="" selected>Elija...</option>
+    <?php
+      foreach ($provincias as $codigo => $provincia) : ?>
+      <?php if ($_POST["provincia"] == $codigo) : ?>
+      <option value="<?=$codigo;?>" selected>
+        <?=$provincia;?>
+      </option>
+    <?php else : ?>
+      <option value="<?=$codigo;?>">
+        <?=$provincia;?>
+      </option>
+    <?php endif; ?>
+    <?php endforeach; ?>
       </select>
     </div>
-    <div class="form-group col-md-2">
-      <label for="inputZip">C.P.</label>
-      <input type="text" class="form-control" name="codpostal" value="<?=isset($codPostal) ? $codPostal : null;?>" id="inputZip">
+    <div class="col-md-4">
+      <label for="">C.P.</label>
+      <input type="text" class="" name="codpostal" value="<?=isset($codPostal) ? $codPostal : null;?>" >
     </div>
   </div>
   <!--<div class="form-group">
