@@ -67,6 +67,24 @@ function validarRegistro () {
     }
   }
 
+  if ($_FILES["foto"]["error"] != 0){
+      $errores['errorfoto'] = 'Hubo un error en la carga de la foto';
+  }
+  else{
+    $ext = pathinfo($_FILES["foto"]["name"], PATHINFO_EXTENSION);
+    if($ext != "jpg" && $ext != "jpeg" && $ext != "png"){
+  $errores['errorfoto'] = 'La imagen debe ser jpg, jpeg o png';
+    }
+    else{
+      //no hay errores
+      //intentar relacionar el nombre con el usuario
+      //
+      //guardarArchivo();
+      $carpeta = "../archivos/";
+      $nombreFoto = $_POST["correoElectronico"];
+     move_uploaded_file($_FILES["foto"]["tmp_name"], $carpeta . $nombreFoto . "." . $ext);
+    }
+  }
   /*// Si el correo electrónico está vacío
   if ( empty($paisDeNacimiento) ) {
     // en el array de errores creo una posición con el texto que deseo mostrar

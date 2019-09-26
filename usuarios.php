@@ -20,7 +20,7 @@ $correoElectronico = $_POST['correoElectronico'];
    </head>
    <body>
      <header class="golfshop">
-   		<a href="index.html" class="volver"><img src="img/shopgolf.png" alt=""></a>
+   		<a href="index.php" class="volver"><img src="img/shopgolf.png" alt=""></a>
    	</header>
      <h1 style="text-align: center">PERFIL DEL USUARIO</h1>
        <form class="perfil" action="index.html" method="post">

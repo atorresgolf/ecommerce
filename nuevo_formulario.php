@@ -1,6 +1,6 @@
 <?php
 	include_once "validacion_registro.php";
-
+	include_once "funciones.php";
 	$nombreCompleto = null;
 	$apellidoCompleto = null;
 	$domicilio = null;
@@ -23,6 +23,11 @@
 		$correoElectronico = trim($_POST['correoElectronico']);
 		$clave =trim($_POST['password']);
 
+
+
+
+
+
 		// Esta función guarda el array que retorna la función validarRegistro()
 		$erroresEnRegistro = validarRegistro();
 
@@ -32,7 +37,14 @@
 			//header('location: usuarios.php');
 			//exit;
 		}
-	}
+
+	//	if($_FILES["foto"]["error"] === UPLOAD_ERROR_OK){
+			// subir archivo FOTO
+	//			$nombreFoto=$_FILES["foto"]["name"];
+	////			$archivo = $_FILES["foto"]["tmp_name"];
+	////			move_uploaded_files($archivo, "../archivos/$nombreFoto");
+	//	}
+
  ?>
 
  <?php
@@ -62,8 +74,14 @@
 		 //agregarle los datos del nuevo usuario
 	 $datos [] = [
 		 'nombre' => $_POST ['nombre'],
-		 'email' => $_POST ['email'],
-		 'nombre_usuario' => $_POST['email'],
+		 "apellido" => $_POST["apellido"],
+		 "domicilio" => $_POST["domicilio"],
+		 "numeroDom" => $_POST["numero"],
+		 "telefono" => $_POST["telefono"],
+		 "localidad" => $_POST["localidad"],
+		 "provincia" => $_POST["provincia"],
+		 'email' => $_POST ['correoElectronico'],
+		 'nombre_usuario' => $_POST['correoElectronico'],
 		 'password' => $password
 	 ];
 
@@ -77,7 +95,7 @@
 
 	 //sobreescribir el archivo con los datos nuevos
 	 file_put_contents ("$archivo", $json);
-	 var_dump($json);
+	// var_dump($json);
 	 exit;
 }
 	 //var_dump($datos);
@@ -105,7 +123,7 @@
 
 <body>
 	<header class="golfshop">
-		<a href="index.html" class="volver"><img src="img/shopgolf.png" alt=""></a>
+		<a href="index.php" class="volver"><img src="img/shopgolf.png" alt=""></a>
 	</header>
 
 		<div class="container">
@@ -166,24 +184,22 @@
 						<div class="validacion"><p><i>Ingrese un nombre valido<i></p></div>
 							<? = $erroresEnRegistro["errorcorreoElectronico"]; ?>
 					<?php endif;?>
-<<<<<<< Updated upstream
+
 
 						<p>Clave:</p>
-						<input type="text" name="password" placeholder="Ingrese una Contraseña" value="<?= $clave; ?>" >
+						<input type="password" name="password" placeholder="Ingrese una Contraseña" value="<?= $clave; ?>" >
 							<?php if ( isset($erroresEnRegistro["errornombre"])) : ?>
 								<div class="validacion"><p><i>Ingrese una clave valida<i></p></div>
 									<? = $erroresEnRegistro["errornombre"]; ?>
 							<?php endif;?>
-=======
-					<p>Foto de Perfil:</p>
-					<input type="file" name="archivo" placeholder="Foto" value="
 
-					">
-						<?php if ( isset($erroresEnRegistro["errorcorreoElectronico"])) : ?>
-							<div class="validacion"><p><i>Ingrese un nombre valido<i></p></div>
-								<? = $erroresEnRegistro["errorcorreoElectronico"]; ?>
-						<?php endif;?>
->>>>>>> Stashed changes
+					<p>Foto de Perfil:</p>
+					<input type="file" name="foto" placeholder="Foto" value="">
+					<?php if ( isset($erroresEnRegistro["errorfoto"])) : ?>
+						<div class="validacion"><p><i>Ingrese archivo valido<i></p></div>
+							<? = $erroresEnRegistro["errorfoto"]; ?>
+					<?php endif;?>
+
 
 				<br>
 				<button type="submit" name="button">Registrar</button>
