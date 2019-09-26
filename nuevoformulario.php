@@ -9,7 +9,6 @@
 	$localidad = null;
 	$provincia = null;
 	$correoElectronico = null;
-	$clave = null;
 
 	if ( count($_POST) ) {
 		// Variables para persistir la información del usuario
@@ -21,75 +20,22 @@
 		$localidad = trim($_POST['localidad']);
 		$provincia = trim($_POST['provincia']);
 		$correoElectronico = trim($_POST['correoElectronico']);
-		$clave =trim($_POST['password']);
 
 		// Esta función guarda el array que retorna la función validarRegistro()
 		$erroresEnRegistro = validarRegistro();
+// subir archivo FOTO
+	$nombreFoto=$_FILES["foto"]["tmp_name"];
+	$archivo = $_FILES["foto"]["tmp_name"];
+	move_uploaded_files($archivo, "../archivos/$nombreFoto");
 
 		// Si no tiene nada el array de errores
-		//if ( !count($erroresEnRegistro) ) {
+		if ( !count($erroresEnRegistro) ) {
 			// Hago una redirección
-			//header('location: usuarios.php');
-			//exit;
+			header('location: usuarios.php');
+			exit;
 		}
 	}
  ?>
-
- <?php
- if ($_POST) {
-	 $password = password_hash ($_POST['password'], PASSWORD_DEFAULT);
-	 $datos = [];
-
-	 // code...
-	 //$datos = $_POST;
-	 //$json = json_encode($datos);
-	 //var_dump($datos);
-
-	 $archivo = "usuarios.json";
-	 $contenidoArchivo = file_get_contents ($archivo);
-	 //var_dump( $contenidoArchivo);
-	 //exit;
-
-	 //una vez obtenido el archivo, convertirlo en array php.
-	 $datos = json_decode ($contenidoArchivo, true);
-	 //var_dump($datos);
-	 //exit;
-
-	 if (!$datos) {
-		 // code...
-		 $datos =[];
-	 }
-		 //agregarle los datos del nuevo usuario
-	 $datos [] = [
-		 'nombre' => $_POST ['nombre'],
-		 'email' => $_POST ['email'],
-		 'nombre_usuario' => $_POST['email'],
-		 'password' => $password
-	 ];
-
-	 //var_dump($datos);
-	 //exit;
-
-	 //codifico de nuevo a jason
-		 $json = json_encode($datos);
-		 //var_dump($datos);
-		 //exit;
-
-	 //sobreescribir el archivo con los datos nuevos
-	 file_put_contents ("$archivo", $json);
-	 var_dump($json);
-	 exit;
-}
-	 //var_dump($datos);
-
-
-//$nombreArchivo = $_FILES['FOTO']['tmp_name'];
-//$archivo = $_FILES['FOTO']['tmp_name'];
-//move_uploaded_file($archivo, "adjuntos/adjunto.jpg");
-//exit;
-
-?>
-
 
 <!DOCTYPE html>
 <html>
@@ -110,7 +56,7 @@
 
 		<div class="container">
 			<h1>FORMULARIO DE REGISTRO</h1>
-			<form class="registro" action="" method="POST" enctype="multipart/form-data">
+			<form class="registro" action="" method="post" enctype="multipart/form-data">
 				<p>Nombre:</p>
 				<input type="text" name="nombre" placeholder="Nombre" value="<?= $nombreCompleto; ?>" >
 					<?php if ( isset($erroresEnRegistro["errornombre"])) : ?>
@@ -166,24 +112,14 @@
 						<div class="validacion"><p><i>Ingrese un nombre valido<i></p></div>
 							<? = $erroresEnRegistro["errorcorreoElectronico"]; ?>
 					<?php endif;?>
-<<<<<<< Updated upstream
-
-						<p>Clave:</p>
-						<input type="text" name="password" placeholder="Ingrese una Contraseña" value="<?= $clave; ?>" >
-							<?php if ( isset($erroresEnRegistro["errornombre"])) : ?>
-								<div class="validacion"><p><i>Ingrese una clave valida<i></p></div>
-									<? = $erroresEnRegistro["errornombre"]; ?>
-							<?php endif;?>
-=======
 					<p>Foto de Perfil:</p>
-					<input type="file" name="archivo" placeholder="Foto" value="
+					<input type="file" name="foto" placeholder="Foto" value="
 
 					">
 						<?php if ( isset($erroresEnRegistro["errorcorreoElectronico"])) : ?>
 							<div class="validacion"><p><i>Ingrese un nombre valido<i></p></div>
 								<? = $erroresEnRegistro["errorcorreoElectronico"]; ?>
 						<?php endif;?>
->>>>>>> Stashed changes
 
 				<br>
 				<button type="submit" name="button">Registrar</button>
