@@ -1,4 +1,7 @@
 <?php
+session_start();
+$usuario = $_SESSION[$correoelectronico]; 
+
 //$nombreCompleto = $_POST['nombre'];
 //$apellidoCompleto = $_POST['apellido'];
 //$domicilio = $_POST['domicilio'];
@@ -27,6 +30,8 @@
    	</header>
     <div class="container">
      <h1 style="text-align: center">PERFIL DEL USUARIO</h1>
+     <h1 style="text-align: center">Bienvenido <?=$usuario?></h1>
+
        <form class="perfil" action="" method="POST" enctype="multipart/form-data">
          <label>NOMBRE:</label><input type="text" name="nombre" value="<?= $nombreCompleto; ?>">
          <br>

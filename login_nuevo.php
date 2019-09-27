@@ -11,13 +11,20 @@
 //exit;
 
 	if (!$datos) {
-		$mensajeError= "El ususario ya exite";
+		$mensajeError= "El ususario no exite";
 	}
+	$datos = [];
+	$archivo = "usuarios.json";
+	$contenidoArchivo = file_get_contents ($archivo);
+//una vez obtenido el archivo, convertirlo en array php.
+$datos = json_decode ($contenidoArchivo, true);
+
+
 //validacion
 	$retorno= null;
 	foreach ($datos as $user) {
 		//por cada ususario pregunatr si el email
-		if($user["correoElectronico"]==$_POST["correoElectronico"]){
+		if($user["email"]==$_POST["correoElectronico"]){
 			$retorno = $user;
 			break;
 		}
@@ -31,10 +38,13 @@ if(!$retorno){
 	$apellidoCompleto = $user['apellido'];
 	$domicilio = $user['domicilio'];
 	$telefono = $user['telefono'];
-	$numero = $user['numero'];
+	$numero = $user['numeroDom'];
 	$localidad = $user['localidad'];
 	$provincia = $user['provincia'];
-	$correoElectronico = $user['correoElectronico'];
+	$correoElectronico = $user['email'];
+	$password = $user['password'];
+	$nombreUsuario = $user['email'];
+	$mensajeError= "Bienvenido";
 }
 }
 
@@ -74,7 +84,7 @@ if(!$retorno){
 
 											<input type="password" name = "password" class="form-control" id="pass" value = "" placeholder="&#128272; Contraseña">
 											<input type="submit" class= "submit" name="submit" value="Ingresar">
-
+											<a href="usuarios.php"></a>
 										</div>
 <!--<div>
 											<button type="submit" class= "submit" name="">Ingresar</button>
