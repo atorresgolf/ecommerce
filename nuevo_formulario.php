@@ -128,7 +128,7 @@
 
 		<div class="container">
 			<h1>FORMULARIO DE REGISTRO</h1>
-			<form class="registro" action="" method="POST" enctype="multipart/form-data">
+			<form class="registro" action="nuevo_formulario.php" method="POST" enctype="multipart/form-data">
 				<p>Nombre:</p>
 				<input type="text" name="nombre" placeholder="Nombre" value="<?= $nombreCompleto; ?>" >
 					<?php if ( isset($erroresEnRegistro["errornombre"])) : ?>

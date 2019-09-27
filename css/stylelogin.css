@@ -15,7 +15,7 @@ body{
   min-height: 100vh;
 }
 
-.div.form{
+.div form{
   margin: auto;
   width: 50%;
   max-width: 500px;
@@ -31,7 +31,7 @@ h2{
   color: rgba(0,0,0,0.5);
 }
 
-.div.forminput{
+.div forminput{
   display: block;
   padding: 10px;
   width: 100%;
@@ -39,7 +39,7 @@ h2{
   font-size: 20px;
 }
 
-.div.submit{
+.div submit{
   margin-left:  auto;
   background: green;
 

@@ -1,12 +1,15 @@
 <?php
-$nombreCompleto = $_POST['nombre'];
-$apellidoCompleto = $_POST['apellido'];
-$domicilio = $_POST['domicilio'];
-$telefono = $_POST['telefono'];
-$numero = $_POST['numero'];
-$localidad = $_POST['localidad'];
-$provincia = $_POST['provincia'];
-$correoElectronico = $_POST['correoElectronico'];
+//$nombreCompleto = $_POST['nombre'];
+//$apellidoCompleto = $_POST['apellido'];
+//$domicilio = $_POST['domicilio'];
+//$telefono = $_POST['telefono'];
+//$numero = $_POST['numero'];
+//$localidad = $_POST['localidad'];
+//$provincia = $_POST['provincia'];
+//$correoElectronico = $_POST['correoElectronico'];
+
+
+
  ?>
 
  <!DOCTYPE html>
@@ -22,8 +25,9 @@ $correoElectronico = $_POST['correoElectronico'];
      <header class="golfshop">
    		<a href="index.php" class="volver"><img src="img/shopgolf.png" alt=""></a>
    	</header>
+    <div class="container">
      <h1 style="text-align: center">PERFIL DEL USUARIO</h1>
-       <form class="perfil" action="index.html" method="post">
+       <form class="perfil" action="" method="POST" enctype="multipart/form-data">
          <label>NOMBRE:</label><input type="text" name="nombre" value="<?= $nombreCompleto; ?>">
          <br>
          <br>
@@ -47,6 +51,6 @@ $correoElectronico = $_POST['correoElectronico'];
          <br>
          <label>CORREO ELECTRONICO:</label><input type="text" name="correoElectronico" value="<?= $correoElectronico; ?>">
        </form>
-
+</div>
    </body>
  </html>
