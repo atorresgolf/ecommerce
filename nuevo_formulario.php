@@ -23,6 +23,11 @@
 		$correoElectronico = trim($_POST['correoElectronico']);
 		$clave =trim($_POST['password']);
 
+    if(!empty($_FILES['foto'])){
+		$extension = pathinfo($_FILES['foto']['name'],PATHINFO_EXTENSION);
+		$filename = md5($correoElectronico). "." .$extension;
+		copy($_FILES['foto']['tmp_name'],"uploads/".$filename);
+	}
 
 
 
@@ -83,6 +88,7 @@
 		 'email' => $_POST ['correoElectronico'],
 		 'nombre_usuario' => $_POST['correoElectronico'],
 		 'password' => $password
+		 'foto' => $filename
 	 ];
 
 	 //var_dump($datos);

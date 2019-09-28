@@ -31,11 +31,15 @@ $datos = json_decode ($contenidoArchivo, true);
 		}
 	}
 
-if(!$retorno){
-	//el usuario no existe
-	$mensajeError= "El ususario no existe";
-}else{
-	$nombreCompleto = $user['nombre'];
+
+	$hash= password_hash($password, PASSWORD_DEFAULT);
+	$resultado= password_verify($password, $hash);
+
+	if($resultado){
+		session_start();
+		$_SESSION["email"] = $correoElectronico;
+
+    $nombreCompleto = $user['nombre'];
 	$apellidoCompleto = $user['apellido'];
 	$domicilio = $user['domicilio'];
 	$telefono = $user['telefono'];
@@ -48,11 +52,12 @@ if(!$retorno){
 	$mensajeError= "Bienvenido $nombreCompleto";
 	
 	$usuario = $_SESSION[$nombreUsuario];
-  	var_dump($usuario);
-}
-}
+	var_dump($usuario);
 
+}else{
+        $mensajeError= "El ususario no existe";
 
+}
 
  ?>
 
