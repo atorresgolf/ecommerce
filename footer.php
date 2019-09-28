@@ -17,7 +17,8 @@
     			<br>
     			<li><a href="preguntas.php" style="color:#CFCBCB;">Preguntas Frecuentes</a></li>
     			<li><a href="nuevo_formulario.php" style="color:#CFCBCB;">Formulario de Registro</a></li>
-    			<li><a href="contacto.php" style="color:#CFCBCB;">Contacto</a></li>
+				<li><a href="usuarios.php" style="color:#CFCBCB;">Perfil de Usuario</a></li>
+				<li><a href="contacto.php" style="color:#CFCBCB;">Contacto</a></li>
     		</ul>
     		<div>
     			<p class="autor">© 2019 The Golf Shop|Diseño y Programación: TNS Designs</p>

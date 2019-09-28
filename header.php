@@ -58,7 +58,9 @@
 													<button class="btn btn-outline-success gr-22 gr-sm-22" type="submit">Buscar</button>
 												</form>
 											</div>
-														<a href="carrito.php" class="volver"><i class="fas fa-2x fa-shopping-cart" style="color:#18EB8E ";></i></a>
+											<a href="login_nuevo.php" class="volver"><i class="fas fa-sign-in-alt" style="color:#18EB8E; size=7x";></i></a>
+			
+											<a href="carrito.php" class="volver"><i class="fas fa-2x fa-shopping-cart" style="color:#18EB8E ";></i></a>
 				</nav>
 
 

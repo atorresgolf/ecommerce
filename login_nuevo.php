@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	$mensajeError="";
 	if ($_POST) {
 		//$password = password_hash ($_POST['password'], PASSWORD_DEFAULT);
@@ -43,8 +44,11 @@ if(!$retorno){
 	$provincia = $user['provincia'];
 	$correoElectronico = $user['email'];
 	$password = $user['password'];
-	$nombreUsuario = $user['email'];
-	$mensajeError= "Bienvenido";
+	$nombreUsuario = $user["email"];
+	$mensajeError= "Bienvenido $nombreCompleto";
+	
+	$usuario = $_SESSION[$nombreUsuario];
+  	var_dump($usuario);
 }
 }
 
@@ -79,20 +83,28 @@ if(!$retorno){
 								<!--<h3 class="panel-title">Formulario de ingreso</h3>-->
 							</div>
 								<div class="form">
-									<form action="" method="POST">
-											<input type="email" name = "correoElectronico" class="form-control" id="mail" placeholder="&#128272; E-mail">
+									<form action="login_nuevo.php" method="POST">
+											<input type="email" name = "correoElectronico" class="form-control" id="mail" placeholder="&#128272; E-mail" >
 
-											<input type="password" name = "password" class="form-control" id="pass" value = "" placeholder="&#128272; Contraseña">
+											<input type="password" name = "password" class="form-control" id="pass" value = "" placeholder="&#128272; Contraseña" >
+											
+											<label for="recordar">Recordar Usuario</label>
+											<input type="checkbox" name = "recordar" >
+											
 											<input type="submit" class= "submit" name="submit" value="Ingresar">
-											<a href="usuarios.php"></a>
 										</div>
 <!--<div>
 											<button type="submit" class= "submit" name="">Ingresar</button>
 </div>-->
 
 									<div class="mensaje">
-										  <p><?=$mensajeError?></p>
+										  <p><?=$mensajeError?><a href="index.php">Volver</a></p>
 									</div>
+									<p><br></p>
+										<p class= "mensaje">¿Olvido su contraseña? <a href="nuevo_formulario.php">Ingresa aquí</a></p>
+
+									</div>
+										
 										<p><br></p>
 										<p class= "mensaje">¿No estas registrado? <a href="nuevo_formulario.php">Ingresa aquí</a></p>
 

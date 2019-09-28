@@ -48,15 +48,17 @@
 												<a class="dropdown-item" href="accesorios.php">Accesorios</a>
 											</div>
 								</li>
-											<li class="nav-item">
-												<a class="nav-link" href="login.php" tabindex="-1" aria-disabled="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>INGRESA</b></a>
-											</li>
+										<!--	<li class="nav-item"> 
+												<a class="nav-link" href="login_nuevo.php" tabindex="-1" aria-disabled="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>INGRESA</b></a>
+											</li>-->
 					</ul>
 									<form class="form-inline my-2 my-lg-0">
 										<input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
 											<button class="btn btn-outline-success gr-22 gr-sm-22" type="submit">Buscar</button>
 									</form>
-					</div>
+                    </div>
+                                    <a href="login_nuevo.php" class="volver"><i class="fas fa-sign-in-alt" style="color:#18EB8E; size=7x";></i></a>
+
 									<a href="carrito.php" class="volver"><i class="fas fa-2x fa-shopping-cart" style="color:#18EB8E ";></i></a>
 				</nav>
 									<h1 id="Titulo">D R I V E R S</h1>
