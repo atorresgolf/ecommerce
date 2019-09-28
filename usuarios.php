@@ -1,6 +1,6 @@
 <?php
 session_start();
-$usuario = $_SESSION[$correoelectronico]; 
+//$usuario = $_SESSION[$correoelectronico]; 
 
 //$nombreCompleto = $_POST['nombre'];
 //$apellidoCompleto = $_POST['apellido'];
@@ -9,8 +9,8 @@ $usuario = $_SESSION[$correoelectronico];
 //$numero = $_POST['numero'];
 //$localidad = $_POST['localidad'];
 //$provincia = $_POST['provincia'];
-//$correoElectronico = $_POST['correoElectronico'];
-
+$correoElectronico = $_POST['correoElectronico'];
+$usuario=$correoElectronico;
 
 
  ?>
@@ -32,7 +32,7 @@ $usuario = $_SESSION[$correoelectronico];
      <h1 style="text-align: center">PERFIL DEL USUARIO</h1>
      <h1 style="text-align: center">Bienvenido <?=$usuario?></h1>
 
-       <form class="perfil" action="" method="POST" enctype="multipart/form-data">
+       <form class="perfil" action="login_nuevo.php" method="POST" enctype="multipart/form-data">
          <label>NOMBRE:</label><input type="text" name="nombre" value="<?= $nombreCompleto; ?>">
          <br>
          <br>

@@ -30,22 +30,28 @@ h1{
  background-color:#0B6121;
  color: white;
  text-align: center;
-font-family: comic
+font-family: comic;
+
 }
 
 .mensaje {
+  display:block;
  border: solid;
  background-color:#0B6121;
  color: white;
  text-align: center;
-font-family: comic
+font-family: comic;
+width: 50%;
+padding-top: 5px;
+padding-bottom: 5px;
+margin-top: 10px;
+}
+
+a{  
+  color: yellow;
 }
 
 
-
-label{
-  color: green;
-}
 .container form {
   margin-top: 20px;
 
@@ -70,7 +76,7 @@ input {
   height: 35px;
 }
 .input submit{
-  width: 20%;!important
+  width: 20%;
 }
 
 button[type="submit"]{
@@ -82,6 +88,7 @@ button[type="submit"]{
   float: right;
   border:0;
   padding-top: 10px;
+  margin-bottom: 10px;
 }
 
 button[type="submit"]:hover{
