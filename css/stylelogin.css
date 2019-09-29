@@ -39,11 +39,30 @@ h2{
   font-size: 20px;
 }
 
+
+label{
+  margin-top: 100px !important;
+}
+
+input[type="checkbok"]{
+  display:block;
+   opacity: 0.8;
+  border-radius: 20px;
+  margin-bottom: 0;
+}
 .div submit{
   margin-left:  auto;
   background: green;
 
 }
+
+.div volver {
+  border: solid;
+  background-color:#0B6121;
+  color: white;
+  text-align: center;
+ font-family: comic
+ }
 input[type="submit"]{
   display:block;
   background: linear-gradient(#FFDA63, #FFB940);

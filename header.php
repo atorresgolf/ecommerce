@@ -14,12 +14,13 @@
 	<body>
 		<header class="golfshop">
 			<img src="img/shopgolf.png" alt="logotipo" class="logo">
-
+			
 		<!-- cabecera -->
 		<div class="redes">
 			<i class="fab fa-2x fa-facebook" style="color:#18EB8E"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<i class="fab fa-2x fa-twitter" style="color:#18EB8E"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<i class="fab fa-2x fa-instagram" style="color:#18EB8E"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			
 		</div>
 
 		<div class="container">

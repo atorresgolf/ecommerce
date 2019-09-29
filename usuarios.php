@@ -1,5 +1,16 @@
 <?php
 session_start();
+
+ $nombreCompleto = $_SESSION["nombre"] ;
+ $nombreUsuario=$_SESSION["usuario"];
+
+	
+	var_dump($_SESSION);
+
+
+//if ternario
+//isset($colorPreferido)? $colorPreferido : ""
+
 //$usuario = $_SESSION[$correoelectronico]; 
 
 //$nombreCompleto = $_POST['nombre'];
@@ -9,8 +20,7 @@ session_start();
 //$numero = $_POST['numero'];
 //$localidad = $_POST['localidad'];
 //$provincia = $_POST['provincia'];
-$correoElectronico = $_POST['correoElectronico'];
-$usuario=$correoElectronico;
+
 
 
  ?>
@@ -30,7 +40,7 @@ $usuario=$correoElectronico;
    	</header>
     <div class="container">
      <h1 style="text-align: center">PERFIL DEL USUARIO</h1>
-     <h1 style="text-align: center">Bienvenido <?=$usuario?></h1>
+     <h1 style="text-align: center font-size: 10px;">Bienvenido <?=$nombreUsuario?></h1>
 
        <form class="perfil" action="login_nuevo.php" method="POST" enctype="multipart/form-data">
          <label>NOMBRE:</label><input type="text" name="nombre" value="<?= $nombreCompleto; ?>">
