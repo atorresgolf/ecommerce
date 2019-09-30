@@ -1,11 +1,20 @@
 <?php
 session_start();
 
- $nombreCompleto = $_SESSION["nombre"] ;
- $nombreUsuario=$_SESSION["usuario"];
+$nombreCompleto = $_SESSION["nombre"] ;
+$nombreUsuario=$_SESSION["usuario"];
+$apellidoCompleto=$_SESSION["apellido"];
+$domicilio=$_SESSION["domicilio"];
+$numero=$_SESSION["numero"];
+$telefono=$_SESSION["telefono"];
+$localidad=$_SESSION["localidad"];
+$provincia=$_SESSION["provincia"];	
+$correoElectronico =$_SESSION["email"];
+//$nombreFoto=$_FILES["foto"][$email];
+	//			$archivo = $_FILES["foto"]["tmp_name"];
+$ruta="../archivos/$correoElectronico";
 
-	
-	var_dump($_SESSION);
+//	var_dump($_SESSION);
 
 
 //if ternario
@@ -65,6 +74,8 @@ session_start();
          <br>
          <br>
          <label>CORREO ELECTRONICO:</label><input type="text" name="correoElectronico" value="<?= $correoElectronico; ?>">
+         <label>FOTO PERFIL:</label><img src= <? $ruta ?> ><input type="file" name="foto" value="Cambiar foto">
+
        </form>
 </div>
    </body>

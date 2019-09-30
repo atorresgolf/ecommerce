@@ -53,15 +53,24 @@
 			$resultado= password_verify($clave, $hash);
 
 		//validar contrasenia
-		if($resultado){	
+		if(!$resultado){	
 		
 			
 		//cuando viene de formulario genera una sesion a un usuario
 			$_SESSION["email"] = $correoElectronico;
 			$_SESSION["nombre"] = $nombreCompleto;
 			$_SESSION["usuario"] = $nombreUsuario;
-			var_dump($_SESSION);
-			exit;
+			$_SESSION["apellido"] = $apellidoCompleto;
+			$_SESSION["domicilio"] = $domicilio;
+			$_SESSION["numero"] = $numero;
+
+			$_SESSION["telefono"] = $telefono;
+			$_SESSION["localidad"] = $localidad;
+			$_SESSION["provincia"] = $provincia;
+			
+
+			//var_dump($_SESSION);
+			//exit;
 		}else{
 			$mensajeError="Contraseña incorrecta";
 		}
