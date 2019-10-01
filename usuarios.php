@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include_once "validacion_registro.php";
 $nombreCompleto = $_SESSION["nombre"] ;
 $nombreUsuario=$_SESSION["usuario"];
 $apellidoCompleto=$_SESSION["apellido"];
@@ -11,8 +11,13 @@ $localidad=$_SESSION["localidad"];
 $provincia=$_SESSION["provincia"];	
 $correoElectronico =$_SESSION["email"];
 //$nombreFoto=$_FILES["foto"][$email];
-	//			$archivo = $_FILES["foto"]["tmp_name"];
-$ruta="../archivos/$correoElectronico";
+  //			$archivo = $_FILES["foto"]["tmp_name"];
+ // $ext = pathinfo($_FILES["foto"]["name"], PATHINFO_EXTENSION);
+  
+  $carpeta = "../archivos/";
+  $nombreFoto = $correoElectronico;
+  
+$ruta= $carpeta.$nombreFoto ;
 
 //	var_dump($_SESSION);
 
@@ -51,7 +56,7 @@ $ruta="../archivos/$correoElectronico";
      <h1 style="text-align: center">PERFIL DEL USUARIO</h1>
      <h1 style="text-align: center font-size: 10px;">Bienvenido <?=$nombreUsuario?></h1>
 
-       <form class="perfil" action="login_nuevo.php" method="POST" enctype="multipart/form-data">
+       <form class="perfil" action="nuevo_formulario.php" method="POST" enctype="multipart/form-data">
          <label>NOMBRE:</label><input type="text" name="nombre" value="<?= $nombreCompleto; ?>">
          <br>
          <br>
@@ -74,9 +79,18 @@ $ruta="../archivos/$correoElectronico";
          <br>
          <br>
          <label>CORREO ELECTRONICO:</label><input type="text" name="correoElectronico" value="<?= $correoElectronico; ?>">
-         <label>FOTO PERFIL:</label><img src= <? $ruta ?> ><input type="file" name="foto" value="Cambiar foto">
-
+         
+         <label>FOTO PERFIL:
+         <div><img src= "<?= $carpeta . $nombreFoto . ".jpg"  ;?>" width=25%>
+         <br>
+         <p> Para cambiarla presione</p>
+         <p> Seleccionar archivo</p> 
+         </div>
+         </label><input type="file" name="foto" value="Cambiar foto">
+         <br>
+				<button type="submit" name="button">Registrar cambios</button>
+				<br>
        </form>
-</div>
+</<label>
    </body>
  </html>

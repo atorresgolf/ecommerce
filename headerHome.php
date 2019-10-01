@@ -60,7 +60,8 @@
                                     <a href="login_nuevo.php" class="volver"><i class="fas fa-sign-in-alt" style="color:#18EB8E; size=7x";></i></a>
 
 									<a href="carrito.php" class="volver"><i class="fas fa-2x fa-shopping-cart" style="color:#18EB8E ";></i></a>
-				</nav>
+									<a href="logout.php" class="volver"><i class="fas fa-sign-out-alt" style="color:#18EB8E; size=7x"></i></a>
+								</nav>
 									<h1 id="Titulo">D R I V E R S</h1>
 			</header>
       </body>
