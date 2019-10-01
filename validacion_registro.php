@@ -61,11 +61,13 @@ function validarRegistro () {
   if ( empty($provincia) ) {
     // en el array de errores creo una posición con el texto que deseo mostrar
     $errores['errorprovincia'] = 'La Provincia es obligatoria';
+  }
 
+   
     if (empty($clave)){
       $errores['errorclave'] = 'La Contraseña es obligatoria';
     }
-  }
+  
 
   if ($_FILES["foto"]["error"] != 0){
       $errores['errorfoto'] = 'Hubo un error en la carga de la foto';

@@ -10,14 +10,16 @@ $telefono=$_SESSION["telefono"];
 $localidad=$_SESSION["localidad"];
 $provincia=$_SESSION["provincia"];	
 $correoElectronico =$_SESSION["email"];
+$nombreFoto=$_SESSION["nombreFoto"];
+//$nombreFoto=$_SESSION["nombreFoto"];
 //$nombreFoto=$_FILES["foto"][$email];
   //			$archivo = $_FILES["foto"]["tmp_name"];
  // $ext = pathinfo($_FILES["foto"]["name"], PATHINFO_EXTENSION);
   
   $carpeta = "../archivos/";
-  $nombreFoto = $correoElectronico;
+ // $nombreFoto = $correoElectronico;
   
-$ruta= $carpeta.$nombreFoto ;
+//$ruta= $carpeta.$nombreFoto ;
 
 //	var_dump($_SESSION);
 
@@ -81,7 +83,7 @@ $ruta= $carpeta.$nombreFoto ;
          <label>CORREO ELECTRONICO:</label><input type="text" name="correoElectronico" value="<?= $correoElectronico; ?>">
          
          <label>FOTO PERFIL:
-         <div><img src= "<?= $carpeta . $nombreFoto . ".jpg"  ;?>" width=25%>
+         <div><img src= "<?= $carpeta . $nombreFoto   ;?>" width=25%>
          <br>
          <p> Para cambiarla presione</p>
          <p> Seleccionar archivo</p> 
