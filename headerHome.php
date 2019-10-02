@@ -1,6 +1,11 @@
 <?php
 session_start();
-$usuarioLogueado=$_SESSION["nombre"];
+
+if (isset($_SESSION["nombre"])){
+	$usuarioLogueado=$_SESSION["nombre"];
+} else {
+	$usuarioLogueado="";
+}
 ?>
 
 <!DOCTYPE html>

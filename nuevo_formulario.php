@@ -78,7 +78,8 @@
 		 // code...
 		 $datos =[];
 	 }
-	 $ext = pathinfo($_FILES["foto"]["name"], PATHINFO_EXTENSION);	 
+	 $ext = pathinfo($_FILES["foto"]["name"], PATHINFO_EXTENSION);
+	 $nombreFoto=$_POST ['correoElectronico'] ;
 	 //agregarle los datos del nuevo usuario
 	 $datos [] = [
 		 'nombre' => $_POST ['nombre'],

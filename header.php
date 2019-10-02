@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if (isset($_SESSION["nombre"])){
+	$usuarioLogueado=$_SESSION["nombre"];
+} else {
+	$usuarioLogueado="";
+}
+?>
+
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -24,6 +35,7 @@
 		</div>
 
 		<div class="container">
+		<p> <?= isset($usuarioLogueado)? $usuarioLogueado : "" ?> </p>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<a class="navbar-brand" href="index.php">The Golf Shop</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,10 +71,10 @@
 													<button class="btn btn-outline-success gr-22 gr-sm-22" type="submit">Buscar</button>
 												</form>
 											</div>
-											<a href="login_nuevo.php" class="volver"><i class="fas fa-sign-in-alt" style="color:#18EB8E; size=7x";></i></a>
+											<a href="login_nuevo.php" class="volver"><i class="fas fa-sign-in-alt" style="color:#18EB8E; size=7x";></i></a><p>Log In</p>
 			
 											<a href="carrito.php" class="volver"><i class="fas fa-2x fa-shopping-cart" style="color:#18EB8E ";></i></a>
-											<a href="logout.php" class="volver"><i class="fas fa-sign-out-alt" style="color:#18EB8E; size=7x"></i></a>
+											<a href="logout.php" class="volver"><i class="fas fa-sign-out-alt" style="color:#18EB8E; size=7x"></i></a><p>Log Out</p>
 
 										</nav>
 

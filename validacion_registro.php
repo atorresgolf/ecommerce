@@ -83,8 +83,8 @@ function validarRegistro () {
       //
       //guardarArchivo();
       $carpeta = "../archivos/";
-      $nombreFoto = $_POST["correoElectronico"];
-     move_uploaded_file($_FILES["foto"]["tmp_name"], $carpeta . $nombreFoto . "." . $ext);
+      $foto = $_POST["correoElectronico"];
+     move_uploaded_file($_FILES["foto"]["tmp_name"], $carpeta . $foto . "." . $ext);
     }
   }
   /*// Si el correo electrónico está vacío

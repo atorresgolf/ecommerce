@@ -1,6 +1,6 @@
 <?php
 session_start();
-//include_once "validacion_registro.php";
+include_once "validacion_registro.php";
 
 $nombreCompleto = $_SESSION["nombre"] ;
 $nombreUsuario=$_SESSION["usuario"];
