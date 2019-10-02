@@ -45,7 +45,7 @@
 			$correoElectronico = $user['email'];
 			$clave = $user['password'];
 			$nombreUsuario = $user["email"];
-			$nombreFoto = $user["nombreFoto"];
+			//$nombreFoto = $user["nombreFoto"];
 			$mensajeError= "Bienvenido $nombreCompleto";
 			//clave ingresada por el usuario que quiere loguearse
 			//$password=$_POST["password"];
@@ -64,7 +64,7 @@
 			$_SESSION["apellido"] = $apellidoCompleto;
 			$_SESSION["domicilio"] = $domicilio;
 			$_SESSION["numero"] = $numero;
-			$_SESSION["nombreFoto"] = $nombreFoto;
+			//$_SESSION["nombreFoto"] = $nombreFoto;
 			$_SESSION["telefono"] = $telefono;
 			$_SESSION["localidad"] = $localidad;
 			$_SESSION["provincia"] = $provincia;

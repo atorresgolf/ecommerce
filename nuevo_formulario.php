@@ -10,8 +10,8 @@
 	$provincia = null;
 	$correoElectronico = null;
 	$clave = null;
-	$nombreFoto=null;
-	$ext=".jpg";
+	//$nombreFoto=null;
+	
 
 	if ( count($_POST) ) {
 		// Variables para persistir la información del usuario
@@ -78,7 +78,8 @@
 		 // code...
 		 $datos =[];
 	 }
-		 //agregarle los datos del nuevo usuario
+	 $ext = pathinfo($_FILES["foto"]["name"], PATHINFO_EXTENSION);	 
+	 //agregarle los datos del nuevo usuario
 	 $datos [] = [
 		 'nombre' => $_POST ['nombre'],
 		 "apellido" => $_POST["apellido"],
@@ -204,11 +205,7 @@
 
 					<p>Foto de Perfil:</p>
 					<input type="file" name="foto" placeholder="Foto" value="">
-					<?php if ( isset($erroresEnRegistro["errorfoto"])) : ?>
-						<div class="validacion"><p><i>Ingrese archivo valido<i></p></div>
-							<? = $erroresEnRegistro["errorfoto"]; ?>
-					<?php endif;?>
-
+					
 
 				<br>
 				<button type="submit" name="button">Registrar</button>
