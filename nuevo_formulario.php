@@ -11,7 +11,7 @@
 	$correoElectronico = null;
 	$clave = null;
 	//$nombreFoto=null;
-	
+
 
 	if ( count($_POST) ) {
 		// Variables para persistir la información del usuario
@@ -33,17 +33,15 @@
 
 
 
-
-
 		// Esta función guarda el array que retorna la función validarRegistro()
-		$erroresEnRegistro = validarRegistro();
+		//$erroresEnRegistro = validarRegistro();
 
 		// Si no tiene nada el array de errores
-		if ( !count($erroresEnRegistro) ) {
+		//if ( !count($erroresEnRegistro) ) {
 			// Hago una redirección
-			header('location: registroExitoso.php');
-			exit;
-		}
+			//header('location: registroExitoso.php');
+			//exit;
+		//}
 
 	//	if($_FILES["foto"]["error"] === UPLOAD_ERROR_OK){
 			// subir archivo FOTO
@@ -52,10 +50,10 @@
 	//			move_uploaded_files($archivo, "../archivos/$nombreFoto");
 	//	}
 	}
- ?>
 
- <?php
- if ($_POST) {
+
+
+ 	if ( !empty($nombreCompleto && $apellidoCompleto && $domicilio && $telefono && $numero && $localidad && $provincia && $correoElectronico && $clave)) {
 	 $password = password_hash ($_POST['password'], PASSWORD_DEFAULT);
 	 $datos = [];
 
@@ -108,7 +106,15 @@
 	 file_put_contents ("$archivo", $json);
 	// var_dump($json);
 	 //exit;
+	 header('location: registroExitoso.php');
+
+}else {
+	echo "
+		<script language='JavaScript'>
+			alert('Existen Campos Vacios, Complete el Formulario de Registro');
+			</script>";
 }
+
 	 //var_dump($datos);
 
 
@@ -144,56 +150,56 @@
 				<input type="text" name="nombre" placeholder="Nombre" value="<?= (isset ($nombreCompleto)? $nombreCompleto : "") ?>" >
 					<?php if ( isset($erroresEnRegistro["errornombre"])) : ?>
 						<div class="validacion"><p><i>Ingrese un nombre valido<i></p></div>
-							<? = $erroresEnRegistro["errornombre"]; ?>
+
 					<?php endif;?>
 
 				<p>Apellido:</p>
 				<input type="text" name="apellido" placeholder="Apellido" value="<?= (isset ($apellidoCompleto)? $apellidoCompleto : "")  ?>" >
 					<?php if ( isset($erroresEnRegistro["errorapellido"])) : ?>
 						<div class="validacion"><p id="validacion"><i>Ingrese un apellido valido<i></p></div>
-							<? = $erroresEnRegistro["errorapellido"]; ?>
+							<?  $erroresEnRegistro["errorapellido"]; ?>
 					<?php endif;?>
 
 				<p>Domicilio:</p>
 				<input type="text" name="domicilio" placeholder="Domicilio" value="<?= (isset($domicilio)? $domicilio : "") ?>" >
 					<?php if ( isset($erroresEnRegistro["errordomicilio"])) : ?>
 						<div class="validacion"><p><i>Ingrese un domicilio valido<i></p></div>
-							<? = $erroresEnRegistro["errordomicilio"]; ?>
+							<?  $erroresEnRegistro["errordomicilio"]; ?>
 					<?php endif;?>
 
 				<p>Nº / Piso, Dpto:</p>
 				<input type="text" name="numero" placeholder="Numero, Dpto" value="<?= (isset($numero) ? $numero : "") ?>" >
 					<?php if ( isset($erroresEnRegistro["errornumero"])) : ?>
 						<div class="validacion"><p><i>Ingrese un numero valido<i></p></div>
-							<? = $erroresEnRegistro["errornumero"]; ?>
+							<?  $erroresEnRegistro["errornumero"]; ?>
 					<?php endif;?>
 
 				<p>Telefono:</p>
 				<input type="text" name="telefono" placeholder="Numero, Dpto" value="<?= (isset($telefono) ? $telefono : "") ?>" >
 					<?php if ( isset($erroresEnRegistro["errortelefono"])) : ?>
 						<div class="validacion"><p id="validacion"><i>Ingrese un numero de tel. valido<i></p></div>
-							<? = $erroresEnRegistro["errortelefono"]; ?>
+							<?  $erroresEnRegistro["errortelefono"]; ?>
 					<?php endif;?>
 
 				<p>Localidad:</p>
 				<input type="text" name="localidad" placeholder="Localidad" value="<?= (isset($localidad) ? $localidad : "") ?>" >
 					<?php if ( isset($erroresEnRegistro["errorlocalidad"])) : ?>
 						<div class="validacion"><p><i>Ingrese una localidad valida<i></p></div>
-							<? = $erroresEnRegistro["errorlocalidad"]; ?>
+							<?  $erroresEnRegistro["errorlocalidad"]; ?>
 					<?php endif;?>
 
 				<p>Provincia:</p>
 				<input type="text" name="provincia" placeholder="Provincia"value="<?= (isset($provincia) ? $provincia : "") ?>">
 					<?php if ( isset($erroresEnRegistro["errorprovincia"])) : ?>
 						<div class="validacion"><p><i>Ingrese un provincia valida<i></p></div>
-							<? = $erroresEnRegistro["errorprovincia"]; ?>
+							<?  $erroresEnRegistro["errorprovincia"]; ?>
 					<?php endif;?>
 
 				<p>Correo Electronico (Nombre de Usuario):</p>
 				<input type="email" name="correoElectronico" placeholder="E-mail" value="<?= (isset($correoElectronico) ? $correoElectronico : "")?>">
 					<?php if ( isset($erroresEnRegistro["errorcorreoElectronico"])) : ?>
 						<div class="validacion"><p><i>Ingrese un nombre valido<i></p></div>
-							<? = $erroresEnRegistro["errorcorreoElectronico"]; ?>
+							<?  $erroresEnRegistro["errorcorreoElectronico"]; ?>
 					<?php endif;?>
 
 
@@ -201,12 +207,12 @@
 						<input type="password" name="password" placeholder="Ingrese una Contraseña" value="" >
 							<?php if ( isset($erroresEnRegistro["errornombre"])) : ?>
 								<div class="validacion"><p><i>Ingrese una clave valida<i></p></div>
-									<? = $erroresEnRegistro["errornombre"]; ?>
+									<?  $erroresEnRegistro["errornombre"]; ?>
 							<?php endif;?>
 
 					<p>Foto de Perfil:</p>
 					<input type="file" name="foto" placeholder="Foto" value="">
-					
+
 
 				<br>
 				<button type="submit" name="button">Registrar</button>
