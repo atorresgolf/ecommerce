@@ -90,7 +90,7 @@
 		 'email' => $_POST ['correoElectronico'],
 		 'nombre_usuario' => $_POST['correoElectronico'],
 		 'password' => $password,
-		 "nombreFoto"=>$nombreFoto . $ext
+		 "nombreFoto"=>$nombreFoto . "." . $ext
 		// 'foto' => $filename
 	 ];
 
@@ -106,13 +106,7 @@
 	 file_put_contents ("$archivo", $json);
 	// var_dump($json);
 	 //exit;
-	 header('location: registroExitoso.php');
-
-}else {
-	echo "
-		<script language='JavaScript'>
-			alert('Existen Campos Vacios, Complete el Formulario de Registro');
-			</script>";
+	
 }
 
 	 //var_dump($datos);
