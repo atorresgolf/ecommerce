@@ -49,7 +49,7 @@
 			//clave ingresada por el usuario que quiere loguearse
 						
 			$resultado= password_verify($_POST["password"], $clave);
-			var_dump($resultado);
+			//var_dump($resultado);
 		//validar contrasenia
 		if($resultado){	
 		
@@ -68,7 +68,7 @@
 			$_SESSION["nombreFoto"]=$nombreFoto;
 			$mensajeError= "Bienvenido $nombreCompleto";
 
-			var_dump($_SESSION);
+			//var_dump($_SESSION);
 			//exit;
 		}else{
 			$mensajeError="Contraseña incorrecta";
