@@ -11,6 +11,6 @@
 	</header>-->
 	<?php include "header.php"; ?>
 	<h2 style= "text-align:center;">¡Tu registro fue exitoso!</h2>
-
+	<?php include "footer.php"; ?>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 	include_once "validacion_registro.php";
-	include_once "funciones.php";
+	//include_once "funciones.php";
 	$nombreCompleto = null;
 	$apellidoCompleto = null;
 	$domicilio = null;
@@ -106,7 +106,13 @@
 	 file_put_contents ("$archivo", $json);
 	// var_dump($json);
 	 //exit;
-	
+	 header('location: registroExitoso.php');
+
+}else {
+	echo "
+		<script language='JavaScript'>
+			alert('Existen Campos Vacios, Complete el Formulario de Registro');
+			</script>";
 }
 
 	 //var_dump($datos);
@@ -118,7 +124,6 @@
 //exit;
 
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -133,6 +138,7 @@
 	</head>
 
 <body>
+
 	<header class="golfshop">
 		<a href="index.php" class="volver"><img src="img/shopgolf.png" alt=""></a>
 	</header>

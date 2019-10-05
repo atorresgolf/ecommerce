@@ -2,6 +2,7 @@
 	session_start();
 	$mensajeError="";
 	if ($_POST) {
+		//$password = password_hash ($_POST['password'], PASSWORD_DEFAULT);
 		$datos = [];
 		$archivo = "usuarios.json";
 		$contenidoArchivo = file_get_contents ($archivo);
@@ -16,73 +17,49 @@
 	$datos = [];
 	$archivo = "usuarios.json";
 	$contenidoArchivo = file_get_contents ($archivo);
-	//una vez obtenido el archivo, convertirlo en array php.
-	$datos = json_decode ($contenidoArchivo, true);
-	//validacion
+//una vez obtenido el archivo, convertirlo en array php.
+$datos = json_decode ($contenidoArchivo, true);
+
+
+//validacion
 	$retorno= null;
 	foreach ($datos as $user) {
 		//por cada ususario pregunatr si el email
 		if($user["email"]==$_POST["correoElectronico"]){
 			$retorno = $user;
-						break;
+			break;
 		}
 	}
 
 
-	
-	if(!$retorno){
-		//el usuario no existe
-		$mensajeError= "El ususario no existe";
-	}else{
-		$nombreCompleto = $user['nombre'];
-			$apellidoCompleto = $user['apellido'];
-			$domicilio = $user['domicilio'];
-			$telefono = $user['telefono'];
-			$numero = $user['numeroDom'];
-			$localidad = $user['localidad'];
-			$provincia = $user['provincia'];
-			$correoElectronico = $user['email'];
-			$clave = $user["password"];
-			$nombreUsuario = $user["email"];
-			$nombreFoto = $user["nombreFoto"];
-			
-			//clave ingresada por el usuario que quiere loguearse
-						
-			$resultado= password_verify($_POST["password"], $clave);
-			var_dump($resultado);
-		//validar contrasenia
-		if($resultado){	
+	$hash= password_hash($password, PASSWORD_DEFAULT);
+	$resultado= password_verify($password, $hash);
+
+	if($resultado){
 		
-			
-		//cuando viene de formulario genera una sesion a un usuario
-			$_SESSION["email"] = $correoElectronico;
-			$_SESSION["nombre"] = $nombreCompleto;
-			$_SESSION["usuario"] = $nombreUsuario;
-			$_SESSION["apellido"] = $apellidoCompleto;
-			$_SESSION["domicilio"] = $domicilio;
-			$_SESSION["numero"] = $numero;
-			$_SESSION["nombreFoto"] = $nombreFoto;
-			$_SESSION["telefono"] = $telefono;
-			$_SESSION["localidad"] = $localidad;
-			$_SESSION["provincia"] = $provincia;
-			$_SESSION["nombreFoto"]=$nombreFoto;
-			$mensajeError= "Bienvenido $nombreCompleto";
+		$_SESSION["email"] = $correoElectronico;
 
-			var_dump($_SESSION);
-			//exit;
-		}else{
-			$mensajeError="Contraseña incorrecta";
-		}
+    $nombreCompleto = $user['nombre'];
+	$apellidoCompleto = $user['apellido'];
+	$domicilio = $user['domicilio'];
+	$telefono = $user['telefono'];
+	$numero = $user['numeroDom'];
+	$localidad = $user['localidad'];
+	$provincia = $user['provincia'];
+	$correoElectronico = $user['email'];
+	$password = $user['password'];
+	$nombreUsuario = $user["email"];
+	$mensajeError= "Bienvenido $nombreCompleto";
 	
-	
-	//cierre else que email q es correcto
-		}
-		//cierre post
-	}
+	$usuario = $_SESSION[$nombreUsuario];
+	//var_dump($usuario);
 
+}else{
+        $mensajeError= "El ususario no existe";
 
+}
 
-?>
+ ?>
 
 
 <!DOCTYPE html>
@@ -97,8 +74,6 @@
 </head>
 
 <body>
-
-
 	<header>
 			<div class="golfshop">
 				<a href="index.php" class="volver"><img src="img/shopgolf.png" alt=""></a>
@@ -115,7 +90,7 @@
 							</div>
 								<div class="form">
 									<form action="login_nuevo.php" method="POST">
-											<input type="email" name = "correoElectronico" class="form-control" id="mail" placeholder="&#128272; E-mail" value="<?=isset($correoElectronico)? $correoElectronico : ""?>" >
+											<input type="email" name = "correoElectronico" class="form-control" id="mail" placeholder="&#128272; E-mail" >
 
 											<input type="password" name = "password" class="form-control" id="pass" value = "" placeholder="&#128272; Contraseña" >
 											

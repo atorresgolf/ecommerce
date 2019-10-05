@@ -32,7 +32,7 @@ if (isset($_SESSION["nombre"])){
 		</div>
 
 		<div class="container">
-		<p> <?= isset($usuarioLogueado)? $usuarioLogueado : "" ?> </p>
+		<p> <?= isset($usuarioLogueado)? $usuarioLogueado : "" ?>estas logueado/a </p>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<a class="navbar-brand" href="#">The Golf Shop</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
