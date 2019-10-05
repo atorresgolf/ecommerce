@@ -20,7 +20,7 @@ $nombreFoto=$_SESSION["nombreFoto"];
   $carpeta = "../archivos/";
   $ruta = $carpeta . $nombreFoto ;
 
-	var_dump($_SESSION);
+	//var_dump($_SESSION);
 
 
 //if ternario
@@ -59,7 +59,7 @@ $nombreFoto=$_SESSION["nombreFoto"];
      <h1 style="text-align: center">PERFIL DEL USUARIO</h1>
      <h1 style="text-align: center font-size: 10px;">Bienvenido <?=$nombreUsuario?></h1>
 
-       <form class="perfil" action="cambiosPerfil.php" method="POST" enctype="multipart/form-data">
+       <form class="perfil" action="usuarios.php" method="POST" enctype="multipart/form-data">
          <label>NOMBRE:</label><input type="text" name="nombre" value="<?= $nombreCompleto; ?>">
          <br>
          <br>
