@@ -1,0 +1,129 @@
+*{
+    margin: 0 auto;
+}
+
+/*.banner{
+  width: 100px;
+  height: 100px;
+  border: 3px solid red;
+  margin: auto;
+  background-size: 100% 100%;
+  animation: banner 15s infinite;
+  animation-direction: alternate;
+  background-color: white;
+}
+
+@keyframes banner{
+  0%, 30%{
+    background-image: url(../img/ping_driver.jpg);
+    opacity: 1;
+  }
+  31%, 34{
+  opacity: 0.1;
+  }
+  35%, 65%{
+    background-image: url(../img/ping_hierros.jpg);
+    opacity: 1;
+  }
+  66%, 69%{
+    opacity: 0.1;
+  }
+  70% 100%{
+    opacity: 1;
+    background-image: url(../img/taylor_m5.jpg);
+  }
+}*/
+
+.golfshop {
+  margin-bottom: 2%;
+}
+
+
+
+img.logo{
+  display:block;
+  }
+
+
+
+h1, h3{
+margin-top: 30px;
+  color: #0B0B61;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+img.fotoacad{
+  display: block;
+  width: 40%;
+  height: 40%;
+
+}
+/*div img{
+  width: 100%;
+  margin: auto;
+}*/
+div.fotos{
+  width: 100%;
+  float:left;
+}
+.body{
+  overflow: hidden;
+}
+
+
+footer {
+  margin-top: 15px;
+  height: 300px;
+  /*background-color: green;*/
+  overflow: hidden;
+  width: 90%;
+  border: 3px double green;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-right-style: none;
+}
+
+.sinvineta1{
+  list-style: none;
+  float: right;
+  font-size: 30px;
+  line-height: 35px;
+  padding-top: 10px;
+  padding-right: 20px;
+}
+
+.list-group-item{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-top: 1%;
+  width: 50%;
+  height: 3%;
+}
+section{
+  overflow: hidden;
+}
+
+.pago{
+  padding-top: 5%;
+  float: right;
+}
+
+/*------media para aipads 768px------*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .card{
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+  }
+
+/*------media para desktop y notebooks 1224px------*/
+@media only screen and (min-width : 1224px)  {
+  .card{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    margin-left: 15%
+  }
+  }
