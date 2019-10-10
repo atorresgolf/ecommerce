@@ -73,10 +73,10 @@ if (isset($_SESSION["nombre"])){
 											</div>
 											
 											<?php if(empty($usuarioLogueado)):?>
-											<a href="login_nuevo.php" class="volver"><i class="fas fa-sign-in-alt" style="color:#18EB8E; size=7x";></i></a><p>Log In</p>
+											<a href="login_nuevo.php" class="volver"><i class="fas fa-2x fa-sign-in-alt" style="color:#18EB8E; size=7x";></i></a><p>Log In</p>
 											<?php endif;?>
 											<a href="carrito.php" class="volver"><i class="fas fa-2x fa-shopping-cart" style="color:#18EB8E ";></i></a>
-											<a href="logout.php" class="volver"><i class="fas fa-sign-out-alt" style="color:#18EB8E; size=7x"></i></a><p>Log Out</p>
+											<a href="logout.php" class="volver"><i class="fas fa-2x fa-sign-out-alt" style="color:#18EB8E; size=7x"></i></a><p>Log Out</p>
 
 										</nav>
 

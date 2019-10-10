@@ -16,37 +16,37 @@ function validarRegistro () {
   // Si el nombre completo está vacío
   if ( empty($nombreCompleto) ) {
     // en el array de errores creo una posición con el texto que deseo mostrar
-    $errores['errornombre'] = 'El nombre es obligatorio';
+    $errores['errorNombre'] = 'El nombre es obligatorio';
   }
 
   //Si el nombre de usuario está vacío
   if ( empty($apellidoCompleto) ) {
     // en el array de errores creo una posición con el texto que deseo mostrar
-    $errores['errorapellido'] = 'El apellido de usuario es obligatorio';
+    $errores['errorApellido'] = 'El apellido de usuario es obligatorio';
   }
 
   // Si el nombre completo está vacío
   if ( empty($domicilio) ) {
     // en el array de errores creo una posición con el texto que deseo mostrar
-    $errores['errordomicilio'] = 'El domicilio es obligatorio';
+    $errores['errorDomicilio'] = 'El domicilio es obligatorio';
   }
 
   // Si el nombre completo está vacío
   if ( empty($numero) ) {
     // en el array de errores creo una posición con el texto que deseo mostrar
-    $errores['errornumero'] = 'El numero es obligatorio';
+    $errores['errorNumero'] = 'El numero es obligatorio';
   }
 
   // Si el nombre completo está vacío
   if ( empty($telefono) ) {
     // en el array de errores creo una posición con el texto que deseo mostrar
-    $errores['errortelefono'] = 'El numero de telefono es obligatorio';
+    $errores['errorTelefono'] = 'El numero de telefono es obligatorio';
   }
 
   // Si el nombre completo está vacío
   if ( empty($localidad) ) {
     // en el array de errores creo una posición con el texto que deseo mostrar
-    $errores['errorlocalidad'] = 'La Localidad es obligatoria';
+    $errores['errorLocalidad'] = 'La Localidad es obligatoria';
   }
 
   //Si el correo electrónico está vacío
@@ -60,22 +60,22 @@ function validarRegistro () {
   // Si el correo electrónico está vacío
   if ( empty($provincia) ) {
     // en el array de errores creo una posición con el texto que deseo mostrar
-    $errores['errorprovincia'] = 'La Provincia es obligatoria';
+    $errores['errorProvincia'] = 'La Provincia es obligatoria';
   }
 
    
     if (empty($clave)){
-      $errores['errorclave'] = 'La Contraseña es obligatoria';
+      $errores['errorClave'] = 'La Contraseña es obligatoria';
     }
   
 
   if ($_FILES["foto"]["error"] != 0){
-      $errores['errorfoto'] = 'Hubo un error en la carga de la foto';
+      $errores['errorFoto'] = 'Hubo un error en la carga de la foto';
   }
   else{
     $ext = pathinfo($_FILES["foto"]["name"], PATHINFO_EXTENSION);
     if($ext != "jpg" && $ext != "jpeg" && $ext != "png"){
-  $errores['errorfoto'] = 'La imagen debe ser jpg, jpeg o png';
+  $errores['errorFoto'] = 'La imagen debe ser jpg, jpeg o png';
     }
     else{
       //no hay errores
