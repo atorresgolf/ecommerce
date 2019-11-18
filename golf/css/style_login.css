@@ -1,0 +1,126 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 2%;
+  background: greenyellow;
+}
+
+h1{
+  font-size: 1em;
+  /*margin-right: 50%;*/
+  color: black;
+  text-align: center;
+
+}
+.hola {
+ border: solid;
+ background-color:#0B6121;
+ color: white;
+ text-align: center;
+font-family: comic;
+
+}
+
+.mensaje {
+  display:block;
+ border: solid;
+ background-color:#0B6121;
+ color: white;
+ text-align: center;
+font-family: comic;
+width: 50%;
+padding-top: 5px;
+padding-bottom: 5px;
+margin-top: 10px;
+}
+
+a{  
+  color: yellow;
+}
+
+
+.container form {
+  margin-top: 20px;
+
+}
+
+.container form input{
+
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.validacion p{
+  color: red;
+}
+.recordar{
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+}
+input[type="checkbox"]{
+  margin-right: 100px !important;
+  height: 20px;
+}
+.label{
+  display: flex !important;
+  margin-top: 120px !important;
+}
+input {
+  display:block;
+  margin-top: 2px;
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 35px;
+}
+.input submit{
+  width: 20%;
+}
+
+button[type="submit"]{
+  width: 120px;
+  height: 40px;
+  margin-top: 3px;
+  background: #144c83;
+  background: linear-gradient(#18EB8E, #17F109);
+  float: right;
+  border:0;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+button[type="submit"]:hover{
+  background: linear-gradient(#17F109, #18EB8E);
+  font-weight: bold;
+  color: #CFCBCB;
+}
+
+
+
+@media only screen and (min-width:701 px) and (max-width:900){
+  .container {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width:1200 px) {
+  .container {
+    width: 10%;
+    margin: 0 auto;
+  }
+}
