@@ -1,0 +1,264 @@
+*{
+    margin: 0 auto;
+}
+
+/*.banner{
+  width: 100px;
+  height: 100px;
+  border: 3px solid red;
+  margin: auto;
+  background-size: 100% 100%;
+  animation: banner 15s infinite;
+  animation-direction: alternate;
+  background-color: white;
+}
+
+@keyframes banner{
+  0%, 30%{
+    background-image: url(../img/ping_driver.jpg);
+    opacity: 1;
+  }
+  31%, 34{
+  opacity: 0.1;
+  }
+  35%, 65%{
+    background-image: url(../img/ping_hierros.jpg);
+    opacity: 1;
+  }
+  66%, 69%{
+    opacity: 0.1;
+  }
+  70% 100%{
+    opacity: 1;
+    background-image: url(../img/taylor_m5.jpg);
+  }
+}*/
+
+.golfshop {
+  margin-bottom: 2%;
+}
+
+
+
+img.logo{
+  display:block;
+  }
+
+
+  main {
+  padding-left: 25%;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  margin-top: 1%;
+  }
+
+
+h1, h3{
+margin-top: 30px;
+  color: #0B0B61;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+img.fotoacad{
+  display: block;
+  width: 40%;
+  height: 40%;
+
+}
+
+
+
+
+/*div img{
+  width: 100%;
+  margin: auto;
+}*/
+div.fotos{
+  width: 100%;
+  float:left;
+}
+.body{
+  overflow: hidden;
+}
+
+@import "compass";
+
+// Fonts
+$font-sans-family:sans-serif;
+$font-serif-family:serif;
+
+// Colors
+$header-color:#090909;
+$paragraph-color:#090909;
+
+// Facts
+$fact-question-color:$header-color;
+$fact-question-color-active:#808080;
+
+// Media Sizes
+$mobile:"max-width:767px";
+
+.parent-container {
+  padding:0 20px 0 20px;
+  max-width:800px;
+  width:100%;
+}
+.faq {
+  list-style:none;
+  padding-left:40px;
+  padding-right:20px;
+  li {
+    border-bottom:1px solid #999999;
+    margin-bottom:15px;
+    &.active {
+      .answer {
+        max-height:275px !important;
+        padding-bottom:25px;
+        transition: max-height 0.5s ease, padding-bottom 0.5s ease;
+      }
+      .question {
+        color:$fact-question-color-active;
+        transition:color 0.5s ease;
+      }
+    }
+  }
+  .answer {
+    color:$paragraph-color;
+    font-family:$font-serif-family;
+    font-size:16px;
+    line-height:24px;
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.5s ease, padding-bottom 0.5s ease;
+  }
+  .plus-minus-toggle {
+    cursor: pointer;
+    height: 21px;
+    position: absolute;
+    width: 21px;
+    left:-40px;
+    top:50%;
+    z-index:2;
+
+    &:before,
+    &:after {
+      background: #000;
+      content: '';
+      height: 5px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 21px;
+      transition: transform 500ms ease;
+    }
+
+    &:after {
+      transform-origin: center;
+    }
+
+    &.collapsed {
+      &:after {
+        transform: rotate(90deg);
+      }
+
+      &:before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .question {
+    color:$fact-question-color;
+    font-family:$font-sans-family;
+    font-size:20px;
+    font-weight:800;
+    text-transform:uppercase;
+    position:relative;
+    cursor:pointer;
+    padding:20px 0;
+    transition:color 0.5s ease;
+    @media screen and ($mobile) {
+      font-size:18px;
+    }
+  }
+}
+
+
+
+
+
+footer {
+  margin-top: 15px;
+  height: 300px;
+  /*background-color: green;*/
+  overflow: hidden;
+  width: 90%;
+  border: 3px double green;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-right-style: none;
+}
+
+.academia {
+  /*height: 45%;*/
+  width: 20%;
+/*  padding-left: 60px;*/
+margin-top: -4%;
+}
+
+.autor {
+    text-align: left;
+    color: #CFCBCB;
+    font-size: 10px;
+    margin-top: -5%;
+}
+
+
+.sinvineta1{
+  list-style: none;
+  float: right;
+  font-size: 30px;
+  line-height: 35px;
+  padding-top: 10px;
+  padding-right: 20px;
+}
+.volver1 {
+  float: right;
+  margin-right: 15%;
+  margin-top: 5%;
+}
+
+.list-group-item{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-top: 1%;
+  width: 50%;
+  height: 3%;
+}
+section{
+  overflow: hidden;
+}
+
+.pago{
+  padding-top: 5%;
+  float: right;
+}
+
+/*------media para aipads 768px------*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .card{
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+  }
+
+/*------media para desktop y notebooks 1224px------*/
+@media only screen and (min-width : 1224px)  {
+  .card{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    margin-left: 15%
+  }
+  }

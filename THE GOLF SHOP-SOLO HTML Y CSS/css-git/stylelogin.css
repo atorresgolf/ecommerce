@@ -1,0 +1,134 @@
+*{
+
+}
+
+.hola {
+ border: solid;
+ background-color:#0B6121;
+ color: white;
+ text-align: center;
+font-family: comic
+}
+body{
+  background: #DEDEDE;
+  display: flex;
+  min-height: 100vh;
+}
+
+.div form{
+  margin: auto;
+  width: 50%;
+  max-width: 500px;
+  background: #F3F3F3;
+  padding: 30px;
+  border: 1px solid rgba(0,0,0,0.2);
+
+
+}
+h2{
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgba(0,0,0,0.5);
+}
+
+.div forminput{
+  display: block;
+  padding: 10px;
+  width: 100%;
+  margin: 30px 0;
+  font-size: 20px;
+}
+
+
+label{
+  margin-top: 100px !important;
+}
+
+input[type="checkbok"]{
+  display:block;
+   opacity: 0.8;
+  border-radius: 20px;
+  margin-bottom: 0;
+}
+.div submit{
+  margin-left:  auto;
+  background: green;
+
+}
+
+.div volver {
+  border: solid;
+  background-color:#0B6121;
+  color: white;
+  text-align: center;
+ font-family: comic
+ }
+input[type="submit"]{
+  display:block;
+  background: linear-gradient(#FFDA63, #FFB940);
+  border: 0;
+  color: brown;
+  opacity: 0.8;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-bottom: 0;
+}
+input[type="submit"]:hover{
+  opacity: 1;
+}
+
+input[type="submit"]:active{
+  transform: scale(0.95);
+}
+@media (max-width: 768px) {
+    form{
+      width: 75%,
+    }
+}
+@media (max-width: 480px) {
+    form{
+      width: 95%,
+    }
+}
+
+
+
+
+footer {
+  margin-top: 15px;
+  height: 300px;
+  /*background-color: green;*/
+  overflow: hidden;
+  width: 90%;
+  border: 3px double green;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-right-style: none;
+}
+
+.tarjetas {
+  text-align: left;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.academia{
+  margin-top: -4%;
+}
+
+.sinvineta1{
+  list-style: none;
+  float: right;
+  font-size: 20px;
+  line-height: 120%;
+  padding-top: 2%;
+  padding-right: 20px;
+}
+
+.list-group-item{
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-top: 1%;
+  width: 50%;
+  height: 3%;
+}

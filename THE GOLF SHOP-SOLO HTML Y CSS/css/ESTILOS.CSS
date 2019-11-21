@@ -1,0 +1,196 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /*=============================== HEADER =============================*/
+    
+    header {
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+    }
+    
+    .barra-nav {
+        margin-top: -0.4rem;
+    }
+    
+    .inicio:hover {
+        background-color: #1e2b38;
+        padding: 15px;
+    }
+    
+    .drivers:hover {
+        background-color: #1e2b38;
+        padding: 15px;
+    }
+    
+    .hierros:hover {
+        background-color: #1e2b38;
+        padding: 15px;
+    }
+    
+    .putters:hover {
+        background-color: #1e2b38;
+        padding: 15px;
+    }
+    
+    .accesorios:hover {
+        background-color: #1e2b38;
+        padding: 15px;
+    }
+    
+    .academia:hover {
+        background-color: #1e2b38;
+        padding: 15px;
+    }
+    /*=============================== CARTAS =============================*/
+    
+    .card-link {
+        color: green;
+    }
+    
+    .card {
+        /*transform: translateY(0px);*/
+        box-shadow: 0 5px 12px rgba(155, 154, 154, 0.876);
+        border-radius: 7px;
+        margin-top: 0px;
+        text-align: center;
+        width: 50%;
+        padding-top: 0px;
+        border-width: medium;
+        border-bottom-color: #18EB8E;
+    }
+    
+    .card:hover {
+        box-shadow: 0 20px 80px grey;
+        border-radius: 5px;
+        text-align: center;
+        opacity: 0.8;
+        border-width: medium;
+        border-bottom-color: #18EB8E;
+    }
+    
+    .card:hover {
+        -webkit-animation: glow 800ms ease-out infinite alternate;
+        -moz-animation: glow 800ms ease-out infinite alternate;
+        -o-animation: glow 800ms ease-out infinite alternate;
+        -ms-animation: glow 800ms ease-out infinite alternate;
+        animation: glow 800ms ease-out infinite alternate;
+        /*border-color: #393;*/
+        /*box-shadow: 0 0 5px rgba(0, 255, 0, .2), 0 0 5px rgba(0, 255, 0, .1), 0 2px 0 #000;*/
+        box-shadow: 0 0 5px rgb(246, 0, 0 .2), 0 0 5px rgba(246, 0, 0, .1), 0 2px 0 #000;
+        /*color: #efe;*/
+        outline: none;
+    }
+    /*=============================== ACADEMIA =============================*/
+    
+    .galeria {
+        font-family: 'open sans';
+    }
+    
+    .galeria h1 {
+        text-align: center;
+        font-weight: 300;
+        color: white;
+    }
+    
+    .linea {
+        border-top: 5px solid #18EB8E;
+        margin-bottom: 40px;
+    }
+    
+    .linea1 {
+        border-top: 5px solid #18EB8E;
+        margin-bottom: 40px;
+    }
+    
+    .contenedor-imagenes {
+        display: flex;
+        width: 85%;
+        margin: auto;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        border-radius: 3px;
+    }
+    
+    .contenedor-imagenes .imagen {
+        width: 32%;
+        position: relative;
+        height: 380px;
+        margin-bottom: 5px;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.99);
+        border: solid white 5px;
+    }
+    
+    .imagen img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .inscripcion {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        background: rgba(30, 100, 0, 0.427);
+        width: 100%;
+        height: 0;
+        transition: .5s ease;
+        overflow: hidden;
+    }
+    
+    .inscripcion h2 {
+        color: #fff;
+        font-weight: 300;
+        font-size: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+    
+    .imagen:hover .inscripcion {
+        height: 100%;
+        cursor: pointer;
+    }
+    /*=============================== ACADEMIA =============================*/
+    
+    @media screen and (min-width: 400px) and (max-width: 800px) {
+        body {
+            align-items: center;
+        }
+        .card {
+            margin-left: 6rem;
+        }
+        .navbar-nav {
+            display: none;
+        }
+    }
+    
+    @media screen and (max-width: 1000px) {
+        .contenedor-imagenes {
+            width: 95%;
+        }
+    }
+    
+    @media screen and (max-width: 700px) {
+        .contenedor-imagenes {
+            width: 90%;
+        }
+        .contenedor-imagenes .imagen {
+            width: 48%;
+        }
+    }
+    
+    @media screen and (max-width: 450px) {
+        h1 {
+            font-size: 22px;
+        }
+        .contenedor-imagenes {
+            width: 98%;
+        }
+        .contenedor-imagenes .imagen {
+            width: 48%;
+        }
+    }
