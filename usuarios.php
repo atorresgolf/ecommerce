@@ -18,11 +18,9 @@ $nombreFoto=$_SESSION["nombreFoto"];
  // $ext = pathinfo($_FILES["foto"]["name"], PATHINFO_EXTENSION);
   
   $carpeta = "../archivos/";
- // $nombreFoto = $correoElectronico;
-  
-//$ruta= $carpeta.$nombreFoto ;
+  $ruta = $carpeta . $nombreFoto ;
 
-	var_dump($_SESSION);
+	//var_dump($_SESSION);
 
 
 //if ternario
@@ -52,6 +50,8 @@ $nombreFoto=$_SESSION["nombreFoto"];
      <title>PERFIL DEL USUARIO</title>
    </head>
    <body>
+
+
      <header class="golfshop">
    		<a href="index.php" class="volver"><img src="img/shopgolf.png" alt=""></a>
    	</header>
@@ -59,7 +59,7 @@ $nombreFoto=$_SESSION["nombreFoto"];
      <h1 style="text-align: center">PERFIL DEL USUARIO</h1>
      <h1 style="text-align: center font-size: 10px;">Bienvenido <?=$nombreUsuario?></h1>
 
-       <form class="perfil" action="cambiosPerfil.php" method="POST" enctype="multipart/form-data">
+       <form class="perfil" action="usuarios.php" method="POST" enctype="multipart/form-data">
          <label>NOMBRE:</label><input type="text" name="nombre" value="<?= $nombreCompleto; ?>">
          <br>
          <br>
@@ -84,7 +84,7 @@ $nombreFoto=$_SESSION["nombreFoto"];
          <label>CORREO ELECTRONICO:</label><input type="text" name="correoElectronico" value="<?= $correoElectronico; ?>">
          
          <label>FOTO PERFIL:
-         <div><img src= "<?= $carpeta . $nombreFoto   ;?>" width=25%>
+         <div><img src= "<?= $ruta ;?>" width=25%>
          <br>
          <p> Para cambiarla presione</p>
          <p> Seleccionar archivo</p> 
@@ -95,5 +95,7 @@ $nombreFoto=$_SESSION["nombreFoto"];
 				<br>
        </form>
 </<label>
+<?php include "footer.php"; ?>
+
    </body>
  </html>

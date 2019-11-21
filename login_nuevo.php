@@ -2,7 +2,6 @@
 	session_start();
 	$mensajeError="";
 	if ($_POST) {
-		$password = password_hash ($_POST['password'], PASSWORD_DEFAULT);
 		$datos = [];
 		$archivo = "usuarios.json";
 		$contenidoArchivo = file_get_contents ($archivo);
@@ -25,7 +24,7 @@
 		//por cada ususario pregunatr si el email
 		if($user["email"]==$_POST["correoElectronico"]){
 			$retorno = $user;
-			break;
+						break;
 		}
 	}
 
@@ -43,18 +42,16 @@
 			$localidad = $user['localidad'];
 			$provincia = $user['provincia'];
 			$correoElectronico = $user['email'];
-			$clave = $user['password'];
+			$clave = $user["password"];
 			$nombreUsuario = $user["email"];
 			$nombreFoto = $user["nombreFoto"];
-			$mensajeError= "Bienvenido $nombreCompleto";
+			
 			//clave ingresada por el usuario que quiere loguearse
-			//$password=$_POST["password"];
-			$hash= password_hash($password, PASSWORD_DEFAULT);
-
-			$resultado= password_verify($clave, $hash);
-
+						
+			$resultado= password_verify($_POST["password"], $clave);
+			//var_dump($resultado);
 		//validar contrasenia
-		if(!$resultado){	
+		if($resultado){	
 		
 			
 		//cuando viene de formulario genera una sesion a un usuario
@@ -68,7 +65,8 @@
 			$_SESSION["telefono"] = $telefono;
 			$_SESSION["localidad"] = $localidad;
 			$_SESSION["provincia"] = $provincia;
-			
+			$_SESSION["nombreFoto"]=$nombreFoto;
+			$mensajeError= "Bienvenido $nombreCompleto";
 
 			//var_dump($_SESSION);
 			//exit;
@@ -99,6 +97,8 @@
 </head>
 
 <body>
+
+
 	<header>
 			<div class="golfshop">
 				<a href="index.php" class="volver"><img src="img/shopgolf.png" alt=""></a>

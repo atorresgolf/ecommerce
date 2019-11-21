@@ -68,10 +68,14 @@ if (isset($_SESSION["nombre"])){
 											<button class="btn btn-outline-success gr-22 gr-sm-22" type="submit">Buscar</button>
 									</form>
                     </div>
-                                    <a href="login_nuevo.php" class="volver"><i class="fas fa-sign-in-alt" style="color:#18EB8E; size=7x";></i></a><p>Log In</p>
-
+									<?php if(empty($usuarioLogueado)):?>
+									<a href="login_nuevo.php" class="volver"><i class="fas fa-2x fa-sign-in-alt" style="color:#18EB8E; size=7x";></i></a><p>Log In</p>
+									<?php endif;?>
 									<a href="carrito.php" class="volver"><i class="fas fa-2x fa-shopping-cart" style="color:#18EB8E ";></i></a>
-									<a href="logout.php" class="volver"><i class="fas fa-sign-out-alt" style="color:#18EB8E; size=7x"></i></a><p>Log Out</p>
+									<?php if(!empty($usuarioLogueado)):?>
+									<a href="logout.php" class="volver"><i class="fas fa-2x fa-sign-out-alt" style="color:#18EB8E; size=7x"></i></a><p>Log Out</p>
+									<?php endif;?>
+	
 								</nav>
 									<h1 id="Titulo">D R I V E R S</h1>
 			</header>
